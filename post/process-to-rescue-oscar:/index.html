@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>记一次重装 oscar 的过程 | Leon&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Android,折腾">
+    <meta name="description" content="一、准备下载各种包 RADIO-oscar-201803170847.zip ，oscar 底包 MK90.0-oscar-201904131310-NIGHTLY.zip ，魔趣每夜版全量包 open_gapps-arm64-9.0-micro-20190406.zip ，谷歌 micro 版全家桶 Magisk-v18.1.zip ，Magisk 18.1 (稳定版) ssr-android.">
+<meta name="keywords" content="Android,折腾">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次重装 oscar 的过程">
+<meta property="og:url" content="https://dreamleon.github.io/post/process-to-rescue-oscar:/index.html">
+<meta property="og:site_name" content="Leon&#39;s Blog">
+<meta property="og:description" content="一、准备下载各种包 RADIO-oscar-201803170847.zip ，oscar 底包 MK90.0-oscar-201904131310-NIGHTLY.zip ，魔趣每夜版全量包 open_gapps-arm64-9.0-micro-20190406.zip ，谷歌 micro 版全家桶 Magisk-v18.1.zip ，Magisk 18.1 (稳定版) ssr-android.">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-28T12:58:19.222Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记一次重装 oscar 的过程">
+<meta name="twitter:description" content="一、准备下载各种包 RADIO-oscar-201803170847.zip ，oscar 底包 MK90.0-oscar-201904131310-NIGHTLY.zip ，魔趣每夜版全量包 open_gapps-arm64-9.0-micro-20190406.zip ，谷歌 micro 版全家桶 Magisk-v18.1.zip ，Magisk 18.1 (稳定版) ssr-android.">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Leon Tuan</h5>
+          <a href="mailto:dreamleon@outlook.com" title="dreamleon@outlook.com" class="mail">dreamleon@outlook.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/links"  >
+                <i class="icon icon-lg icon-link"></i>
+                Friends
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/dreamleon" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                About me
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">记一次重装 oscar 的过程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">记一次重装 oscar 的过程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-04-18T04:25:58.000Z" itemprop="datePublished" class="page-time">
+  2019-04-18
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载各种包"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">下载各种包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#备份手机文件"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">备份手机文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、开始重刷"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、开始重刷</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、开机后的调试阶段"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、开机后的调试阶段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Magisk"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Magisk</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装各大神器"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">安装各大神器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他小设置"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">其他小设置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些记录"><span class="post-toc-number">4.</span> <span class="post-toc-text">一些记录</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-process-to-rescue-oscar"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">记一次重装 oscar 的过程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-18 12:25:58" datetime="2019-04-18T04:25:58.000Z"  itemprop="datePublished">2019-04-18</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h2><h3 id="下载各种包"><a href="#下载各种包" class="headerlink" title="下载各种包"></a>下载各种包</h3><ul>
+<li><code>RADIO-oscar-201803170847.zip</code> ，oscar 底包</li>
+<li><code>MK90.0-oscar-201904131310-NIGHTLY.zip</code> ，魔趣每夜版全量包</li>
+<li><code>open_gapps-arm64-9.0-micro-20190406.zip</code> ，谷歌 micro 版全家桶</li>
+<li><code>Magisk-v18.1.zip</code> ，Magisk 18.1 (稳定版)</li>
+<li><code>ssr-android.apk</code> ，SSR 安装包，你懂的</li>
+</ul>
+<p><em>注：</em> 将以上全部包放入 U 盘或 SD 卡中，因为这次要完全重刷，手机内置存储也要清除</p>
+<h3 id="备份手机文件"><a href="#备份手机文件" class="headerlink" title="备份手机文件"></a>备份手机文件</h3><ul>
+<li>把轻课表的课表文件拉到了电脑上，同时注册了账户，进行了云备份</li>
+<li>把纯纯写作的备份文件拉到了电脑，同时注册了 Dropbox 基础版，云备份实现</li>
+</ul>
+<h2 id="二、开始重刷"><a href="#二、开始重刷" class="headerlink" title="二、开始重刷"></a>二、开始重刷</h2><ol>
+<li><p>关机，插入你的 U 盘或 SD 卡</p>
+</li>
+<li><p>按住 <code>音量+</code> 键和 <code>电源</code> 键进入 TWRP</p>
+</li>
+<li><p>点进 Wipe =&gt; Advanced Wipe ，选中以下选项，五清</p>
+<ul>
+<li>Dalvik / ART Cache</li>
+<li>Cache</li>
+<li>System</li>
+<li>Data</li>
+<li>Internal Storage</li>
+</ul>
+<p><em>注：</em> 一般人 <strong>双清</strong> 就足够了，我这是特殊需求。</p>
+</li>
+<li><p>进 Install ，刷 <strong>底包</strong> 。<strong>刷完双清</strong> ，不要重启</p>
+</li>
+<li><p>继续刷 <strong>全量包</strong> ，<strong>刷完双清</strong></p>
+</li>
+<li><p>然后刷入 Magisk 开机调试好 Magisk 再刷 open Gapps</p>
+<p><em>记：</em> 刷入 Magisk 以后直接再刷 open-Gapps 会闪重进 Recovery 。实际好像是 Magisk 没有成功刷入。</p>
+</li>
+<li><p>重启体验</p>
+</li>
+</ol>
+<h2 id="三、开机后的调试阶段"><a href="#三、开机后的调试阶段" class="headerlink" title="三、开机后的调试阶段"></a>三、开机后的调试阶段</h2><h3 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h3><blockquote>
+<p>调试失败，重回「一」。</p>
+<blockquote>
+<p>原因：无法通过 ctsProfils 检测，后安装了 busybox &amp; MagiskHide Props Config 依旧无效，尝试终端 root 运行 props 命令改 device fingerprint ，然后炸了，Lawnchair v2 一直停止运行，然后无奈，重刷之。</p>
+</blockquote>
+</blockquote>
+<p>可安装 Magisk-v19 ，已正式发布。安装 <code>MagiskManagerMD2.apk</code> ，美化界面。</p>
+<blockquote>
+<p>垃圾，升级不了，卸之，回原版。</p>
+</blockquote>
+<p>第二次，ctsProfile 还是过不了，算了，不理那个了。</p>
+<h3 id="安装各大神器"><a href="#安装各大神器" class="headerlink" title="安装各大神器"></a>安装各大神器</h3><ul>
+<li><strong>Google Chrome</strong> ：怎么少得了呢。</li>
+<li><strong>Storage Redirect</strong> (存储重定向) ：可将一些软件在 <code>/sdcard</code> 下胡乱拉的屎（有些其实也不算屎，但是也在目录下产生了）重定向到相应包名的 <code>data</code> 下和 <code>Android/data</code> 下，保持 <code>/sdcard</code> 的清洁。</li>
+<li><strong>AppOps</strong> ：安卓权限管理工具，限制毒瘤应用随意获取权限。<ul>
+<li><strong>Shizuku Manager</strong> ：。</li>
+</ul>
+</li>
+<li><strong>Dir</strong> ：垃圾清理工具，可以以 <em>占坑</em> 的方式阻止一些应用不断生产垃圾。</li>
+<li><strong>SSR</strong> ：你懂的。</li>
+<li><strong>Telegram</strong> ：高雅的 IM 软件。</li>
+<li><strong>Google Translate</strong> ：装好以后可开启全局选中查单词，好用又不臃肿。</li>
+<li><strong>Share 微博客户端</strong> ： <em>鸡仔</em> 出品，我认为最好的微博客户端，没有之一。</li>
+<li><strong>知乎</strong> ：「学习」必备……。</li>
+<li><strong>Pure Writer</strong> (纯纯写作) ：我认为安卓端最好用的写作软件，是他让我有想在手机上写东西的冲动。（没有电脑的情况）</li>
+<li><strong>XiaoMi Push Framework</strong> (小米推送服务) ：可使一些应用使用小米系统级推送服务，节省电量。</li>
+<li><strong>FastHub</strong> ：一款 GitHub 安卓客户端。做得不错，解决了 GitHub 手机网页版的一些痛点。</li>
+</ul>
+<h3 id="其他小设置"><a href="#其他小设置" class="headerlink" title="其他小设置"></a>其他小设置</h3><ul>
+<li>设置安全选项，屏幕锁定，指纹。</li>
+<li>开启系统样式随为 <strong>自动 (一天中的时间)</strong> ，这样晚上的时候系统会变成暗色，护眼又漂亮。</li>
+<li>开启谷歌自动换壁纸，一天一个样，每天好心情。</li>
+</ul>
+<hr>
+<h2 id="一些记录"><a href="#一些记录" class="headerlink" title="一些记录"></a>一些记录</h2><p>共重启 30 余次，五清重刷 2 次。耗费时间「多半天」。</p>
+<p>带来的心里慰藉</p>
+<ul>
+<li>手机更干净了</li>
+<li>全新了</li>
+<li>没了</li>
+</ul>
+<p>强烈建议禁止 <code>知乎</code> 开机自启，唤醒服务，看的麻烦。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-07-28T12:58:19.222Z" itemprop="dateUpdated">2019-07-28 20:58:19</time>
+</span><br>
+
+
+        
+        找到这篇文章：<a href="/post/process-to-rescue-oscar:/" target="_blank" rel="external">https://dreamleon.github.io/post/process-to-rescue-oscar:/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://dreamleon.github.io">
+            <img src="/img/avatar.jpg" alt="Leon Tuan">
+            Leon Tuan
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/post/add-comment-system:/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">评论系统已加入</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/post/hello-my-blog:/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hello My Blog</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'leons-blog';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Leon Tuan &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

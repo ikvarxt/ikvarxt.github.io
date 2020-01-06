@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>利用 hexo 框架和 GitHub Pages 搭建个人博客 | Leon&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="折腾">
+    <meta name="description" content="9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。 Hexo 和 GitHub Pages 给我一切。感谢。 本地 Hexo 环境搭建软件基础：macOS Mojave 。Hexo 中文文档 https://hexo.io/zh-cn/docs/ Hexo 基于 Node.js ，可利用 brew 命令安装 node.js ，安装 npm 管理">
+<meta name="keywords" content="折腾">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用 hexo 框架和 GitHub Pages 搭建个人博客">
+<meta property="og:url" content="https://dreamleon.github.io/post/use-hexo-&-GitHub-Pages-to-build-a-personal-blog:/index.html">
+<meta property="og:site_name" content="Leon&#39;s Blog">
+<meta property="og:description" content="9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。 Hexo 和 GitHub Pages 给我一切。感谢。 本地 Hexo 环境搭建软件基础：macOS Mojave 。Hexo 中文文档 https://hexo.io/zh-cn/docs/ Hexo 基于 Node.js ，可利用 brew 命令安装 node.js ，安装 npm 管理">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2019/05/10/5cd573546fb5b.png">
+<meta property="og:updated_time" content="2019-07-28T12:40:26.498Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用 hexo 框架和 GitHub Pages 搭建个人博客">
+<meta name="twitter:description" content="9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。 Hexo 和 GitHub Pages 给我一切。感谢。 本地 Hexo 环境搭建软件基础：macOS Mojave 。Hexo 中文文档 https://hexo.io/zh-cn/docs/ Hexo 基于 Node.js ，可利用 brew 命令安装 node.js ，安装 npm 管理">
+<meta name="twitter:image" content="https://i.loli.net/2019/05/10/5cd573546fb5b.png">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Leon Tuan</h5>
+          <a href="mailto:dreamleon@outlook.com" title="dreamleon@outlook.com" class="mail">dreamleon@outlook.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/links"  >
+                <i class="icon icon-lg icon-link"></i>
+                Friends
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/dreamleon" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                About me
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">利用 hexo 框架和 GitHub Pages 搭建个人博客</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">利用 hexo 框架和 GitHub Pages 搭建个人博客</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-05-10T10:18:28.000Z" itemprop="datePublished" class="page-time">
+  2019-05-10
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/建站/">建站</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本地-Hexo-环境搭建"><span class="post-toc-number">1.</span> <span class="post-toc-text">本地 Hexo 环境搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装-hexo"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装 hexo</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建一个文件夹来存放博客的文件夹-blog"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">创建一个文件夹来存放博客的文件夹 blog</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初始化-hexo-网站目录"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">初始化 hexo 网站目录</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建第一篇博文"><span class="post-toc-number">2.</span> <span class="post-toc-text">创建第一篇博文</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署至-GitHub-Pages"><span class="post-toc-number">3.</span> <span class="post-toc-text">部署至 GitHub Pages</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#细节更改"><span class="post-toc-number">4.</span> <span class="post-toc-text">细节更改</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主页信息"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">主页信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#博客主题"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">博客主题</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-use-hexo-&amp;-GitHub-Pages-to-build-a-personal-blog"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">利用 hexo 框架和 GitHub Pages 搭建个人博客</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-05-10 18:18:28" datetime="2019-05-10T10:18:28.000Z"  itemprop="datePublished">2019-05-10</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/建站/">建站</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。</p>
+<p>Hexo 和 GitHub Pages 给我一切。感谢。</p>
+<h2 id="本地-Hexo-环境搭建"><a href="#本地-Hexo-环境搭建" class="headerlink" title="本地 Hexo 环境搭建"></a>本地 Hexo 环境搭建</h2><p><em>软件基础：macOS Mojave</em> 。Hexo 中文文档 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
+<p>Hexo 基于 Node.js ，可利用 brew 命令安装 node.js ，安装 npm 管理器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br><span class="line">brew install npm</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cil</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建一个文件夹来存放博客的文件夹-blog"><a href="#创建一个文件夹来存放博客的文件夹-blog" class="headerlink" title="创建一个文件夹来存放博客的文件夹 blog"></a>创建一个文件夹来存放博客的文件夹 blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化-hexo-网站目录"><a href="#初始化-hexo-网站目录" class="headerlink" title="初始化 hexo 网站目录"></a>初始化 hexo 网站目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建第一篇博文"><a href="#创建第一篇博文" class="headerlink" title="创建第一篇博文"></a>创建第一篇博文</h2><p>标题为引号内的内容。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"hello my blog"</span></span><br></pre></td></tr></table></figure>
+
+<p>这时你就可以编辑位于 <code>~/blog/source/_post</code> 目录下的 <code>hello-my-blog.md</code> 文件。写写你的想法。</p>
+<p>使用 <code>hexo s</code> ，浏览器访问 <code>http://localhost:4000</code> 本地预览你的博客。适合网站发布前进行调试。</p>
+<p>我用 Typora 编辑博文， macOS 下一个十分好用的 Markdown 编辑器，亮点就是可以实时预览，还有众多主题可选。当然，你也可以直接用 Vim 来写。</p>
+<p><img src="https://i.loli.net/2019/05/10/5cd573546fb5b.png" alt="Typora"></p>
+<h2 id="部署至-GitHub-Pages"><a href="#部署至-GitHub-Pages" class="headerlink" title="部署至 GitHub Pages"></a>部署至 GitHub Pages</h2><ol>
+<li><p>GitHub 中新建一个仓库，仓库名需为 <code>username.github.io</code> (<code>username</code> 为你的 GitHub 账号名)，才可在公网访问。<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+</li>
+<li><p>安装 git deploy 插件。<a href="https://hexo.io/zh-cn/docs/deployment#Git" target="_blank" rel="noopener">Hexo 官方文档</a></p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>修改博客本地根目录下的 <code>_config.yml</code> 配置文件。使 Git deploy 可用。</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">	<span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">	<span class="attr">repo:</span> <span class="attr">https://github.com/username/username.github.io</span></span><br></pre></td></tr></table></figure>
+
+<p>   repo: 需改为你的 GitHub Pages 仓库地址。</p>
+<ol start="4">
+<li><p>终端执行 <code>hexo clean &amp;&amp; hexo d</code> 即可将自己的博客上传至 Git 仓库。就可以在浏览器访问了。</p>
+<p>第一次上传无需执行 <code>hexo clean</code> ，不过以后都是需要先清空生成的文件才可以部署。</p>
+</li>
+</ol>
+<h2 id="细节更改"><a href="#细节更改" class="headerlink" title="细节更改"></a>细节更改</h2><h3 id="主页信息"><a href="#主页信息" class="headerlink" title="主页信息"></a>主页信息</h3><p><a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo 配置</a> 可以修改根目录下的 <code>_config.yml</code> 来加入你的特殊信息。网站名，简介，关键字，作者等主要信息都在这里存储。</p>
+<h3 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h3><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo 主题</a> ，这里有很多优质的主题，可以挑选一个搭配自己的性格，如果有能力也可以自己写一个主题，上传到这里，让更多的人用。</p>
+<p>本博客使用由 <a href="https://blog.oniuo.com/" target="_blank" rel="noopener">Elmore Cheng</a> 开发的主题 <a href="https://github.com/elmorec/hexo-theme-inside" target="_blank" rel="noopener">inside</a> 。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2019-07-28T12:40:26.498Z" itemprop="dateUpdated">2019-07-28 20:40:26</time>
+</span><br>
+
+
+        
+        找到这篇文章：<a href="/post/use-hexo-&amp;-GitHub-Pages-to-build-a-personal-blog:/" target="_blank" rel="external">https://dreamleon.github.io/post/use-hexo-&amp;-GitHub-Pages-to-build-a-personal-blog:/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://dreamleon.github.io">
+            <img src="/img/avatar.jpg" alt="Leon Tuan">
+            Leon Tuan
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/post/Release-direction-keys:/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">再也不用去按角落里的方向键了</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/post/solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor:/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'leons-blog';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Leon Tuan &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
