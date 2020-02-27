@@ -1,496 +1,674 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+
+
+
+
 <head><meta name="generator" content="Hexo 3.9.0">
-    
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="description" content>
+  <meta name="author" content="Leon Tuan">
+  <meta name="keywords" content>
+  <title>Leon&#39;s Blog</title>
 
-    
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
 
-    
+
+  <link rel="stylesheet" href="/lib/prettify/atelier-seaside-light.min.css">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css">
 
-    <meta charset="utf-8">
-    
-    
-    
-    
-    <title>Leon&#39;s Blog | 啦啦啦?!!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content>
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Leon&#39;s Blog">
-<meta property="og:url" content="https://dreamleon.github.io/index.html">
-<meta property="og:site_name" content="Leon&#39;s Blog">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leon&#39;s Blog">
-    
-    <link rel="shortcut icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
-
-    <!-- custom head -->
-    
 
 </head>
 
-<body>
-    <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">Leon Tuan</h5>
-          <a href="mailto:dreamleon@outlook.com" title="dreamleon@outlook.com" class="mail">dreamleon@outlook.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Leon's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-            <li class="waves-block waves-effect active">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                Home
-              </a>
-            </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/links"  >
-                <i class="icon icon-lg icon-link"></i>
-                Friends
-              </a>
-            </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/links/">Links</a>
+          </li>
         
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/dreamleon" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/about"  >
-                <i class="icon icon-lg icon-user"></i>
-                About me
-              </a>
-            </li>
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
         
       </ul>
     </div>
   </div>
-</aside>
+</nav>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Leon&#39;s Blog</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/skyler-h-w-bPRl6xNPs-unsplash.jpg')no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="fas fa-angle-down scroll-down-arrow"></i>
+            </div>
+          
         </div>
-        
-        
+      </div>
     </div>
-</header>
-<header class="content-header index-header">
+  </header>
 
-    <div class="container fade-scale">
-        <h1 class="title">Leon&#39;s Blog</h1>
-        <h5 class="subtitle">
-            
-                啦啦啦?!!
-            
-        </h5>
-    </div>
-
+  <main>
     
+      <div class="container nopadding-md">
+        <div class="py-5 z-depth-3" id="board">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
 
 
-</header>
-
-<div class="container body-wrap">
-
-    <ul class="post-list">
+  <div class="row mx-auto index-card">
     
-        <li class="post-list-item fade">
-            <article id="post-Release-direction-keys"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-10-19 13:07:01" datetime="2019-10-19T05:07:01.000Z"  itemprop="datePublished">2019-10-19</time>
-
-        
-
-
-    </div>
-
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/Release-direction-keys:/">再也不用去按角落里的方向键了</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        利用一些软件，或者直接修改系统的键位配置文件来实现将方向键移到和 Vim 一样的键位。
-其实这篇早就想要写了，一直没有下手，以前只有在 macOS 改了，直到拖到在 Linux 和 Windows 上也实现了，那就填了这坑吧，存下档，同时与你们分享。
-    
-
-        <a href="/post/Release-direction-keys:/" class="post-more waves-effect waves-button">
-            Continue reading...
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/post/Release-direction-keys:/" target="_self">
+          <img src="https://sm.ms/image/IfSm91rGJqhDnXc" srcset="/img/loading.gif" alt="再也不用去按角落里的方向键了" class="index-img img-fluid rounded index-thumbnails">
         </a>
-    </div>
+      </div>
     
-    <div class="post-footer">
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/post/Release-direction-keys:/">
+        <p class="h4 index-header">再也不用去按角落里的方向键了</p>
+      </a>
+
+      <a href="/post/Release-direction-keys:/">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/效率提升/">效率提升</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-use-hexo-&amp;-GitHub-Pages-to-build-a-personal-blog"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-05-10 18:18:28" datetime="2019-05-10T10:18:28.000Z"  itemprop="datePublished">2019-05-10</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/建站/">建站</a></li></ul>
+          
+          
+        
+        <div class="index-excerpt" style="max-height: none;">
+          <div class="index-text mb-1">利用一些软件，或者直接修改系统的键位配置文件来实现将方向键移到和 Vim 一样的键位。
+其实这篇早就想要写了，一直没有下手，以前只有在 macOS 改了，直到拖到在 Linux 和 Windows 上也实现了，那就填了这坑吧，存下档，同时与你们分享。...</div>
+        </div>
+      </a>
 
-
-
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-19&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/%E6%8A%98%E8%85%BE">折腾</a>&nbsp;
+          
+            <a href="/tags/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87">效率提升</a>&nbsp;
+          
+        
+      </div>
     </div>
+  </div>
 
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/use-hexo-&-GitHub-Pages-to-build-a-personal-blog:/">利用 hexo 框架和 GitHub Pages 搭建个人博客</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/post/use-hexo-&-GitHub-Pages-to-build-a-personal-blog:/" target="_self">
+          <img src="http://i.v2ex.co/5bb7J7NT.png" srcset="/img/loading.gif" alt="利用 hexo 框架和 GitHub Pages 搭建个人博客" class="index-img img-fluid rounded index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/post/use-hexo-&-GitHub-Pages-to-build-a-personal-blog:/">
+        <p class="h4 index-header">利用 hexo 框架和 GitHub Pages 搭建个人博客</p>
+      </a>
+
+      <a href="/post/use-hexo-&-GitHub-Pages-to-build-a-personal-blog:/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。
 Hexo 和 GitHub Pages 给我一切。感谢。
 本地 Hexo 环境搭建软件基础：macOS Mojave 。Hexo 中文文档 https://hexo.io/zh-cn/docs/
-Hexo 基于 Node.js ，可利用 brew 命令安装 node.js ，安装 npm...
-    
+Hexo 基于 Node.js ，可利用 brew 命令安装 node.js ，安装 npm 管理器。
+brew install node
+brew install npm
+安装 hexonpm install -g hexo-cil
+创建一个文件夹来存放博客的文件夹 blogmkdir blog
+初始化 hexo 网站目录hexo init blog
+cd blog
+npm install
+创建第一篇博文标题为引号内的内容。
+hexo new &quot;hello my blog&quot;
+这时你就可以编辑位于 ~/blog/source/_post 目录下的 hello-my-blog.md 文件。写写你的想法。
+使用 hexo s ，浏览器访问 http://localhost:</div>
+        </div>
+      </a>
 
-        <a href="/post/use-hexo-&-GitHub-Pages-to-build-a-personal-blog:/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+      <div class="index-btm">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-05-07 12:17:20" datetime="2019-05-07T04:17:20.000Z"  itemprop="datePublished">2019-05-07</time>
-
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-05-10&nbsp;&nbsp;
         
-
-
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E5%BB%BA%E7%AB%99">建站</a>&nbsp;
+          &nbsp;
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/%E6%8A%98%E8%85%BE">折腾</a>&nbsp;
+          
+        
+      </div>
     </div>
+  </div>
 
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor:/">解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        好久以前就想买一个显示器，最近终于剁手了明基家的专业显示器 PD2500Q (我也是后来才知道这是一个专业的显示器，穷学生发出了没钱的惨叫)，连接好发现整个显示器的显示都很虚，字体也很小，降分辨率后更虚了，遂开始折腾。
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/post/solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor:/">
+        <p class="h4 index-header">解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题</p>
+      </a>
+
+      <a href="/post/solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor:/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">好久以前就想买一个显示器，最近终于剁手了明基家的专业显示器 PD2500Q (我也是后来才知道这是一个专业的显示器，穷学生发出了没钱的惨叫)，连接好发现整个显示器的显示都很虚，字体也很小，降分辨率后更虚了，遂开始折腾。
 本篇文章整理自知乎用户 Wenson Smith 的回答 。在此记录我的折腾过程。
 
 利用软件 SwitchResX 开启显示器的 HiDPI 渲染模式
-关闭笔记本的 SIP...
-    
+关闭笔记本的 SIP 系统完整性保护进入 macOS 恢复模式
 
-        <a href="/post/solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor:/" class="post-more waves-effect waves-button">
-            Continue reading...
+将您的 Mac 开机，然后立即在键盘上按住 Command (⌘)-R 或其他 macOS 恢复功能组合键之一。继续按住这些键，直到您看到 Apple 标志或旋转的地球。
+来自苹果官网
+
+打开 终端 ，输入 csrutil disable 禁用 SIP 。reboot 重启电脑。
+安装 SwitchResX官网下载地址 ，按提示安装，需选择 为电脑上所有用户安装 。
+创建一个新的管理员用户注销当前用户，登录新的用户。从 系统偏好设置 面板打开 SwitchResX 。
+更改分辨率设置打开你的显示器设置面板，选择 Custon Resolutions ，添</div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-05-07&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/%E6%8A%98%E8%85%BE">折腾</a>&nbsp;
+          
+            <a href="/tags/MacBook%20Pro">MacBook Pro</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/post/add-comment-system:/" target="_self">
+          <img src="https://sm.ms/image/AjYi4F2O7kHg1Dr" srcset="/img/loading.gif" alt="disqus 评论系统已加入" class="index-img img-fluid rounded index-thumbnails">
         </a>
-    </div>
+      </div>
     
-    <div class="post-footer">
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/post/add-comment-system:/">
+        <p class="h4 index-header">disqus 评论系统已加入</p>
+      </a>
+
+      <a href="/post/add-comment-system:/">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MacBook-Pro/">MacBook Pro</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-add-comment-system"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-04-19 22:09:43" datetime="2019-04-19T14:09:43.000Z"  itemprop="datePublished">2019-04-19</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/建站/">建站</a></li></ul>
+          
+          
+        
+        <div class="index-excerpt" style="max-height: none;">
+          <div class="index-text mb-1">各位读者现在可以尽情评论了，说出你们的观点吧，轻喷。🥰...</div>
+        </div>
+      </a>
 
-
-
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-04-19&nbsp;&nbsp;
+        
+        
+          <i class="iconfont icon-inbox"></i>
+          
+            <a href="/categories/%E5%BB%BA%E7%AB%99">建站</a>&nbsp;
+          &nbsp;
+        
+        
+      </div>
     </div>
+  </div>
 
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/add-comment-system:/">评论系统已加入</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        各位读者现在可以尽情评论了，说出你们的观点吧，轻喷。🥰
-    
-
-        <a href="/post/add-comment-system:/" class="post-more waves-effect waves-button">
-            Continue reading...
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/post/process-to-rescue-oscar:/" target="_self">
+          <img src="https://sm.ms/image/Rd2BWtnUiN4OVFZ" srcset="/img/loading.gif" alt="记一次重装 oscar 的过程" class="index-img img-fluid rounded index-thumbnails">
         </a>
-    </div>
+      </div>
     
-</article>
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/post/process-to-rescue-oscar:/">
+        <p class="h4 index-header">记一次重装 oscar 的过程</p>
+      </a>
 
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-process-to-rescue-oscar"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-04-18 12:25:58" datetime="2019-04-18T04:25:58.000Z"  itemprop="datePublished">2019-04-18</time>
-
+      <a href="/post/process-to-rescue-oscar:/">
         
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/process-to-rescue-oscar:/">记一次重装 oscar 的过程</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        一、准备下载各种包
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">一、准备下载各种包
 RADIO-oscar-201803170847.zip ，oscar 底包
 MK90.0-oscar-201904131310-NIGHTLY.zip ，魔趣每夜版全量包
 open_gapps-arm64-9.0-micro-20190406.zip ，谷歌 micro 版全家桶
 Magisk-v18.1.zip ，Magisk 18.1 (稳定版)
-ssr-andro...
-    
+ssr-android.apk ，SSR 安装包，你懂的
 
-        <a href="/post/process-to-rescue-oscar:/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+注： 将以上全部包放入 U 盘或 SD 卡中，因为这次要完全重刷，手机内置存储也要清除
+备份手机文件
+把轻课表的课表文件拉到了电脑上，同时注册了账户，进行了云备份
+把纯纯写作的备份文件拉到了电脑，同时注册了 Dropbox 基础版，云备份实现
+
+二、开始重刷
+关机，插入你的 U 盘或 SD 卡
+
+按住 音量+ 键和 电源 键进入 TWRP
+
+点进 Wipe =&gt; Advanced Wipe ，选中以下选项，五清
+
+Dalvik / ART Cache
+Cache
+System
+Data
+Internal Storage
+
+注： 一般人 双清 就足够了，</div>
+        </div>
+      </a>
+
+      <div class="index-btm">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-hello-my-blog"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-04-17 20:30:00" datetime="2019-04-17T12:30:00.000Z"  itemprop="datePublished">2019-04-17</time>
-
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-04-18&nbsp;&nbsp;
         
-
-
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/%E6%8A%98%E8%85%BE">折腾</a>&nbsp;
+          
+            <a href="/tags/Android">Android</a>&nbsp;
+          
+        
+      </div>
     </div>
+  </div>
 
+  <div class="row mx-auto index-card">
     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/hello-my-blog:/">Hello My Blog</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
     
-        我是谁一个普通大学的软件工程大一学生，未来的苦逼程序员。但我对生活还是蛮有兴趣的，所以建了这个博客站，和大家分享些生活中的点滴。
-关于这个博客~~这个站现在处于试运营阶段，可能会持续一年（因为我域名和服务器都只买了一年🤪），而域名买错了，我当初要的是 www.leontuan.space ，改了两次，还是买错了，先这样用着，不出意外的话一年后应该会换域名🤣，到时候我通知大家，不过应该不会...
-    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a href="/post/hello-my-blog:/">
+        <p class="h4 index-header">Hello My Blog</p>
+      </a>
 
-        <a href="/post/hello-my-blog:/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-    </ul>
-
-    
-
+      <a href="/post/hello-my-blog:/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">我是谁一个普通大学的软件工程大一学生，未来的苦逼程序员。但我对生活还是蛮有兴趣的，所以建了这个博客站，和大家分享些生活中的点滴。
+关于这个博客~~这个站现在处于试运营阶段，可能会持续一年（因为我域名和服务器都只买了一年🤪），而域名买错了，我当初要的是 www.leontuan.space ，改了两次，还是买错了，先这样用着，不出意外的话一年后应该会换域名🤣，到时候我通知大家，不过应该不会影响很多人，因为几乎没人看🤭。~~ 
+博客迁移至 GitHub Pages ，正式运营阶段开启。
+我后续应该会写一篇关于 Hexo 建博客的文章，还是挺麻烦的，大家可以期待一下。
+~~后续会开通评论功能，几天内吧。🥰~~  已开通。
 </div>
+        </div>
+      </a>
 
-        <footer class="footer">
-    <div class="top">
+      <div class="index-btm">
         
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-04-17&nbsp;&nbsp;
+        
+        
+        
+      </div>
+    </div>
+  </div>
 
-        <p>
-            
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
-        </p>
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-    <div class="bottom">
-        <p><span>Leon Tuan &copy; 2019 - 2020</span>
-            <span>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
-    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    Powered by <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <!-- <i class="iconfont icon-love"></i> -->
+    &nbsp;
+    Theme - <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv"></span>PV: 
+          <span id="busuanzi_value_site_pv"></span>&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv"></span>UV: 
+            <span id="busuanzi_value_site_uv"></span>&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
 
 
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+  <script src="/js/lazyload.js" ></script>
 
 
-</script>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
 
 
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+  <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
 
 
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "$ sudo pacman -Syu&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 30,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+  
+    <script type="text/javascript">
+      //定义获取词语下标
+      var a_idx = 0;
+      jQuery(document).ready(function ($) {
+        //点击body时触发事件
+        $("body").click(function (e) {
+          //需要显示的词语
+          var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+          //设置词语给span标签
+          var $i = $("<span/>").text(a[a_idx]);
+          //下标等于原来下标+1  余 词语总数
+          a_idx = (a_idx + 1) % a.length;
+          //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+          //获取x和y的指针坐标
+          var x = e.pageX, y = e.pageY;
+          //在鼠标的指针的位置给$i定义的span标签添加css样式
+          $i.css({
+            "z-index": 999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": rand_color()
+          });
+          // 随机颜色
+          function rand_color() {
+            return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+          }
+          //在body添加这个标签
+          $("body").append($i);
+          //animate() 方法执行 CSS 属性集的自定义动画。
+          //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+          //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+          $i.animate({
+            //将原来的位置向上移动180
+            "top": y - 180,
+            "opacity": 0
+            //1500动画的速度
+          }, 1500, function () {
+            //时间到了自动删除
+            $i.remove();
+          });
+        });
+      })
+      ;
+    </script>
+  
 
 
 

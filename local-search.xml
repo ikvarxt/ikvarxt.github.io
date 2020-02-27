@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>再也不用去按角落里的方向键了</title>
+    <link href="//post/Release-direction-keys:/"/>
+    <url>//post/Release-direction-keys:/</url>
+    
+    <content type="html"><![CDATA[<p>利用一些软件，或者直接修改系统的键位配置文件来实现将方向键移到和 Vim 一样的键位。</p><p>其实这篇早就想要写了，一直没有下手，以前只有在 macOS 改了，直到拖到在 Linux 和 Windows 上也实现了，那就填了这坑吧，存下档，同时与你们分享。</p><a id="more"></a><h1 id="0x01-macOS-端"><a href="#0x01-macOS-端" class="headerlink" title="0x01 macOS 端"></a>0x01 macOS 端</h1><p>所需软件：传说中的 <a href="https://github.com/tekezo/Karabiner-Elements" target="_blank" rel="noopener">Karabiner-Elements</a> ，<a href="https://pqrs.org/osx/karabiner/document.html" target="_blank" rel="noopener">开发者文档</a> 奉上。</p><p>Karabiner  十分强大，但我其实只用了其中的一个功能，就是改键规则。</p><p><img src="https://i.loli.net/2019/10/19/pYu3MzHqJleEXwB.png" srcset="/img/loading.gif" alt></p><p>进入之后切换到<code>Complex modifications</code>下<code>Rules</code>点击<code>Add rule</code>，弹出页面最上面有<code>Import more rules from the Internet</code>，点击之后会进入 Karabiner 的官方规则仓库，可以在这里寻找你想要的规则，十分丰富。</p><p>我只用了上图中的两个，即实现了按<code>Caps_lock + h/j/k/l</code>为<code>左/下/上/右</code>，好用到爆，即使在我切换电脑的英文键位为 Programmer Dvorak 以后，操作键位也没有变，应该是绑定了 key code 的。</p><h1 id="0x02-Linux-端"><a href="#0x02-Linux-端" class="headerlink" title="0x02 Linux 端"></a>0x02 Linux 端</h1><p>Linux 端改键有几种方法，不过我用了其中风险最大的一种，并且因此开不了机（只是我自己作死，改错了文件，然后就无法加载了），然后我就格盘换了 Windows 7 。</p><p><strong><em>本节基于 Arch Linux 编写</em></strong>。</p><p>思路来自：<a href="https://medium.com/@allenfrank14/linux-永久更改鍵盤設定-fa61014ac486" target="_blank" rel="noopener">Linux 永久更改键盘设定 by Allen Chang</a> ，这里只做整理分享。</p><p>Linux 装有 Xorg 服务的都另采用 X keyboard extension (XKB) 来定义键盘设定，文件存储于<code>usr/share/X11/xkb</code>目录下。我们需要修改的就是各位用的键盘的配置文件，通常使用 us 键盘的用户修改<code>system</code>下 us 文件即可。</p><p><strong>以下引用内容来自上方链接文章</strong>。</p><blockquote><p>以下是我对<code>/usr/share/X11/xkb/symbols/us</code>的更改（需要 root 权限）：</p></blockquote><pre><code>default  partial alphanumeric_keys modifier_keys xkb_symbols &quot;basic&quot; {     name[Group1]= &quot;English (US)&quot;;     key.type = &quot;ONE_LEVEL&quot;;     key &lt;CAPS&gt;  {  [ ISO_Level3_Shift ]   };     modifier_map Mod5 { ISO_Level3_Shift };     key &lt;RCTL&gt;  {  [ Caps_Lock ]   };     key.type = &quot;THREE_LEVEL&quot;;     (...)     key &lt;AD08&gt; {   [         i,       I,       Home ]   };     key &lt;AD09&gt; {   [         o,       O,        End ]   };     (...)     key &lt;AC03&gt; {   [         d,       D,     Return ]   };     key &lt;AC04&gt; {   [         f,       F,     Return ]   };     key &lt;AC05&gt; {   [         g,       G             ]   };     key &lt;AC06&gt; {   [         h,       H,       Left ]   };     key &lt;AC07&gt; {   [         j,       J,       Down ]   };     key &lt;AC08&gt; {   [         k,       K,         Up ]   };     key &lt;AC09&gt; {   [         l,       L,      Right ]   };     key &lt;AC10&gt; {   [ semicolon,   colon,  BackSpace ]   };     (...)     key &lt;AB07&gt; {   [         m,       M,      Prior ]   };     key &lt;AB08&gt; {   [     comma,    less,       Next ]   };     (...) };(...)</code></pre><blockquote><p>其中：</p><ul><li><code>key.type = “THREE_LEVEL”;</code>定义了下面的按键都有三种模式（一般/按 shift/按 Mode_switch）。</li><li><code>ISO_Level3_Shift</code>相当于先前提到的 Mode_switch，一种 modifier，是 level3（Shift 就是 ISO_Level2_Shift，也可以定义更高的 level）。</li><li>Modifiers 不会受到 Shfit 改变行为，如 ctrl/alt/enter/backspace 等等。</li><li>在<code>[]</code>內的是一個 group，你也可以设定多个 group，然后设定按键在这些 group 之间切换。</li></ul><p>改完之后执行<code>sudo dpkg-reconfigure xkb-data</code>清空 XKB 的 cache，再用<code>setxkbmap us</code>设定只用 US layout，切换输入法应该就会生效了。<strong>因为是直接更改 default 的设定，有问题可能会让你的键盘不能正常运作，改的時候千万要小心。</strong>若沒把握，可以先看<a href="https://askubuntu.com/questions/482678/how-to-add-a-new-keyboard-layout-custom-keyboard-layout-definition" target="_blank" rel="noopener">這篇</a>的教学，设定额外的键盘，不会影响到 US 的设定。</p><p>使用 XKB 的好处是可以永久改变键盘设定，不受切换输入法及休眠的影响，並且可以做复杂的改变（定义多重 Level 及 Group 等等）；缺点是规则繁多，要花时间理解，且不小心可能会让键盘不能正常运作。</p></blockquote><p>具体实现步骤也许有些许偏差，主要还是这篇文章咕了太久了，系统都重装好几遍了……大家有什么问题可下方留言告诉我，如果看不见下方评论系统也可发邮件给我，欢迎大家。</p><h1 id="0x03-Windows-端"><a href="#0x03-Windows-端" class="headerlink" title="0x03 Windows 端"></a>0x03 Windows 端</h1><p><em>— 待完善 —</em></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>折腾</tag>
+      
+      <tag>效率提升</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>利用 hexo 框架和 GitHub Pages 搭建个人博客</title>
+    <link href="//post/use-hexo-&amp;-GitHub-Pages-to-build-a-personal-blog:/"/>
+    <url>//post/use-hexo-&amp;-GitHub-Pages-to-build-a-personal-blog:/</url>
+    
+    <content type="html"><![CDATA[<p>9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。</p><p>Hexo 和 GitHub Pages 给我一切。感谢。</p><h2 id="本地-Hexo-环境搭建"><a href="#本地-Hexo-环境搭建" class="headerlink" title="本地 Hexo 环境搭建"></a>本地 Hexo 环境搭建</h2><p><em>软件基础：macOS Mojave</em> 。Hexo 中文文档 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p><p>Hexo 基于 Node.js ，可利用 brew 命令安装 node.js ，安装 npm 管理器。</p><pre><code class="bash">brew install nodebrew install npm</code></pre><h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><pre><code class="bash">npm install -g hexo-cil</code></pre><h3 id="创建一个文件夹来存放博客的文件夹-blog"><a href="#创建一个文件夹来存放博客的文件夹-blog" class="headerlink" title="创建一个文件夹来存放博客的文件夹 blog"></a>创建一个文件夹来存放博客的文件夹 blog</h3><pre><code class="bash">mkdir blog</code></pre><h3 id="初始化-hexo-网站目录"><a href="#初始化-hexo-网站目录" class="headerlink" title="初始化 hexo 网站目录"></a>初始化 hexo 网站目录</h3><pre><code class="bash">hexo init blogcd blognpm install</code></pre><h2 id="创建第一篇博文"><a href="#创建第一篇博文" class="headerlink" title="创建第一篇博文"></a>创建第一篇博文</h2><p>标题为引号内的内容。</p><pre><code class="bash">hexo new &quot;hello my blog&quot;</code></pre><p>这时你就可以编辑位于 <code>~/blog/source/_post</code> 目录下的 <code>hello-my-blog.md</code> 文件。写写你的想法。</p><p>使用 <code>hexo s</code> ，浏览器访问 <code>http://localhost:4000</code> 本地预览你的博客。适合网站发布前进行调试。</p><p>我用 Typora 编辑博文， macOS 下一个十分好用的 Markdown 编辑器，亮点就是可以实时预览，还有众多主题可选。当然，你也可以直接用 Vim 来写。</p><p><img src="https://i.loli.net/2019/05/10/5cd573546fb5b.png" srcset="/img/loading.gif" alt="Typora"></p><h2 id="部署至-GitHub-Pages"><a href="#部署至-GitHub-Pages" class="headerlink" title="部署至 GitHub Pages"></a>部署至 GitHub Pages</h2><ol><li><p>GitHub 中新建一个仓库，仓库名需为 <code>username.github.io</code> (<code>username</code> 为你的 GitHub 账号名)，才可在公网访问。<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p></li><li><p>安装 git deploy 插件。<a href="https://hexo.io/zh-cn/docs/deployment#Git" target="_blank" rel="noopener">Hexo 官方文档</a></p></li></ol><pre><code class="bash">npm install hexo-deployer-git --save</code></pre><ol start="3"><li>修改博客本地根目录下的 <code>_config.yml</code> 配置文件。使 Git deploy 可用。</li></ol><pre><code class="yaml">deploy:    type: git    repo: https://github.com/username/username.github.io</code></pre><p>   repo: 需改为你的 GitHub Pages 仓库地址。</p><ol start="4"><li><p>终端执行 <code>hexo clean &amp;&amp; hexo d</code> 即可将自己的博客上传至 Git 仓库。就可以在浏览器访问了。</p><p>第一次上传无需执行 <code>hexo clean</code> ，不过以后都是需要先清空生成的文件才可以部署。</p></li></ol><h2 id="细节更改"><a href="#细节更改" class="headerlink" title="细节更改"></a>细节更改</h2><h3 id="主页信息"><a href="#主页信息" class="headerlink" title="主页信息"></a>主页信息</h3><p><a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo 配置</a> 可以修改根目录下的 <code>_config.yml</code> 来加入你的特殊信息。网站名，简介，关键字，作者等主要信息都在这里存储。</p><h3 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h3><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo 主题</a> ，这里有很多优质的主题，可以挑选一个搭配自己的性格，如果有能力也可以自己写一个主题，上传到这里，让更多的人用。</p><p><del>本博客使用由 <a href="https://blog.oniuo.com/" target="_blank" rel="noopener">Elmore Cheng</a> 开发的主题 <a href="https://github.com/elmorec/hexo-theme-inside" target="_blank" rel="noopener">inside</a>。</del></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>建站</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>折腾</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题</title>
+    <link href="//post/solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor:/"/>
+    <url>//post/solve-the-problem-of-the-fonts-that-come-with-the-MacBook-Pro-Connected-2K-Monitor:/</url>
+    
+    <content type="html"><![CDATA[<p>好久以前就想买一个显示器，最近终于剁手了明基家的专业显示器 PD2500Q (我也是后来才知道这是一个专业的显示器，穷学生发出了没钱的惨叫)，连接好发现整个显示器的显示都很虚，字体也很小，降分辨率后更虚了，遂开始折腾。</p><p>本篇文章整理自知乎用户 <a href="https://www.zhihu.com/question/35300978/answer/126332986" target="_blank" rel="noopener">Wenson Smith 的回答</a> 。在此记录我的折腾过程。</p><hr><p><strong>利用软件 SwitchResX 开启显示器的 HiDPI 渲染模式</strong></p><h3 id="关闭笔记本的-SIP-系统完整性保护"><a href="#关闭笔记本的-SIP-系统完整性保护" class="headerlink" title="关闭笔记本的 SIP 系统完整性保护"></a>关闭笔记本的 SIP 系统完整性保护</h3><p>进入 macOS 恢复模式</p><blockquote><p>将您的 Mac 开机，然后立即在键盘上按住 Command (⌘)-R 或<a href="https://support.apple.com/zh-cn/HT204904" target="_blank" rel="noopener">其他 macOS 恢复功能组合键</a>之一。继续按住这些键，直到您看到 Apple 标志或旋转的地球。</p><p>来自苹果官网</p></blockquote><p>打开 <strong>终端</strong> ，输入 <code>csrutil disable</code> 禁用 SIP 。<code>reboot</code> 重启电脑。</p><h3 id="安装-SwitchResX"><a href="#安装-SwitchResX" class="headerlink" title="安装 SwitchResX"></a>安装 SwitchResX</h3><p><a href="http://www.madrau.com/data/switchresx/SwitchResX4.zip" target="_blank" rel="noopener">官网下载地址</a> ，按提示安装，需选择 <strong>为电脑上所有用户安装</strong> 。</p><h3 id="创建一个新的管理员用户"><a href="#创建一个新的管理员用户" class="headerlink" title="创建一个新的管理员用户"></a>创建一个新的管理员用户</h3><p>注销当前用户，登录新的用户。从 <strong>系统偏好设置</strong> 面板打开 SwitchResX 。</p><h3 id="更改分辨率设置"><a href="#更改分辨率设置" class="headerlink" title="更改分辨率设置"></a>更改分辨率设置</h3><p>打开你的显示器设置面板，选择 <strong>Custon Resolutions</strong> ，添加一条 Scaled resolutions 规则，设置为 <code>2160 X 3840</code> (1080p HiDPI) (我是竖屏使用) 。</p><p>关闭窗口自动保存，提示输入用户密码。</p><h3 id="重启电脑使设置生效"><a href="#重启电脑使设置生效" class="headerlink" title="重启电脑使设置生效"></a>重启电脑使设置生效</h3><p>再次打开 SwitchResX 设置窗口，更改显示器分辨率为 <code>1080 X 1920 (HiDPI)</code> 即可。</p><p>奇迹出现。</p><p>使用没有问题后， <strong>再次进入恢复模式关闭 SIP 即可</strong> 。</p><h2 id="一些记录"><a href="#一些记录" class="headerlink" title="一些记录"></a>一些记录</h2><ul><li>SwitchResX 可以试用 10 天。需要购买。</li><li>折腾期间电脑死机 2 次，有时会出现显示器无现实的情况，不知原因。</li><li>有时设置了 Scaled Resolution 规则后，不会在列表里出现 <code>1080 X 1920 (HiDPI)</code> 。重启啥的，多试几次。</li><li>无法任性的切换横竖显示了，会使分辨率设置失效，有时伴随电脑死机，显示器黑屏。</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>折腾</tag>
+      
+      <tag>MacBook Pro</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>disqus 评论系统已加入</title>
+    <link href="//post/add-comment-system:/"/>
+    <url>//post/add-comment-system:/</url>
+    
+    <content type="html"><![CDATA[<p>各位读者现在可以尽情评论了，说出你们的观点吧，轻喷。🥰</p><a id="more"></a>]]></content>
+    
+    
+    <categories>
+      
+      <category>建站</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>记一次重装 oscar 的过程</title>
+    <link href="//post/process-to-rescue-oscar:/"/>
+    <url>//post/process-to-rescue-oscar:/</url>
+    
+    <content type="html"><![CDATA[<h2 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h2><h3 id="下载各种包"><a href="#下载各种包" class="headerlink" title="下载各种包"></a>下载各种包</h3><ul><li><code>RADIO-oscar-201803170847.zip</code> ，oscar 底包</li><li><code>MK90.0-oscar-201904131310-NIGHTLY.zip</code> ，魔趣每夜版全量包</li><li><code>open_gapps-arm64-9.0-micro-20190406.zip</code> ，谷歌 micro 版全家桶</li><li><code>Magisk-v18.1.zip</code> ，Magisk 18.1 (稳定版)</li><li><code>ssr-android.apk</code> ，SSR 安装包，你懂的</li></ul><p><em>注：</em> 将以上全部包放入 U 盘或 SD 卡中，因为这次要完全重刷，手机内置存储也要清除</p><h3 id="备份手机文件"><a href="#备份手机文件" class="headerlink" title="备份手机文件"></a>备份手机文件</h3><ul><li>把轻课表的课表文件拉到了电脑上，同时注册了账户，进行了云备份</li><li>把纯纯写作的备份文件拉到了电脑，同时注册了 Dropbox 基础版，云备份实现</li></ul><h2 id="二、开始重刷"><a href="#二、开始重刷" class="headerlink" title="二、开始重刷"></a>二、开始重刷</h2><ol><li><p>关机，插入你的 U 盘或 SD 卡</p></li><li><p>按住 <code>音量+</code> 键和 <code>电源</code> 键进入 TWRP</p></li><li><p>点进 Wipe =&gt; Advanced Wipe ，选中以下选项，五清</p><ul><li>Dalvik / ART Cache</li><li>Cache</li><li>System</li><li>Data</li><li>Internal Storage</li></ul><p><em>注：</em> 一般人 <strong>双清</strong> 就足够了，我这是特殊需求。</p></li><li><p>进 Install ，刷 <strong>底包</strong> 。<strong>刷完双清</strong> ，不要重启</p></li><li><p>继续刷 <strong>全量包</strong> ，<strong>刷完双清</strong></p></li><li><p>然后刷入 Magisk 开机调试好 Magisk 再刷 open Gapps</p><p><em>记：</em> 刷入 Magisk 以后直接再刷 open-Gapps 会闪重进 Recovery 。实际好像是 Magisk 没有成功刷入。</p></li><li><p>重启体验</p></li></ol><h2 id="三、开机后的调试阶段"><a href="#三、开机后的调试阶段" class="headerlink" title="三、开机后的调试阶段"></a>三、开机后的调试阶段</h2><h3 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h3><blockquote><p>调试失败，重回「一」。</p><blockquote><p>原因：无法通过 ctsProfils 检测，后安装了 busybox &amp; MagiskHide Props Config 依旧无效，尝试终端 root 运行 props 命令改 device fingerprint ，然后炸了，Lawnchair v2 一直停止运行，然后无奈，重刷之。</p></blockquote></blockquote><p>可安装 Magisk-v19 ，已正式发布。安装 <code>MagiskManagerMD2.apk</code> ，美化界面。</p><blockquote><p>垃圾，升级不了，卸之，回原版。</p></blockquote><p>第二次，ctsProfile 还是过不了，算了，不理那个了。</p><h3 id="安装各大神器"><a href="#安装各大神器" class="headerlink" title="安装各大神器"></a>安装各大神器</h3><ul><li><strong>Google Chrome</strong> ：怎么少得了呢。</li><li><strong>Storage Redirect</strong> (存储重定向) ：可将一些软件在 <code>/sdcard</code> 下胡乱拉的屎（有些其实也不算屎，但是也在目录下产生了）重定向到相应包名的 <code>data</code> 下和 <code>Android/data</code> 下，保持 <code>/sdcard</code> 的清洁。</li><li><strong>AppOps</strong> ：安卓权限管理工具，限制毒瘤应用随意获取权限。<ul><li><strong>Shizuku Manager</strong> ：。</li></ul></li><li><strong>Dir</strong> ：垃圾清理工具，可以以 <em>占坑</em> 的方式阻止一些应用不断生产垃圾。</li><li><strong>SSR</strong> ：你懂的。</li><li><strong>Telegram</strong> ：高雅的 IM 软件。</li><li><strong>Google Translate</strong> ：装好以后可开启全局选中查单词，好用又不臃肿。</li><li><strong>Share 微博客户端</strong> ： <em>鸡仔</em> 出品，我认为最好的微博客户端，没有之一。</li><li><strong>知乎</strong> ：「学习」必备……。</li><li><strong>Pure Writer</strong> (纯纯写作) ：我认为安卓端最好用的写作软件，是他让我有想在手机上写东西的冲动。（没有电脑的情况）</li><li><strong>XiaoMi Push Framework</strong> (小米推送服务) ：可使一些应用使用小米系统级推送服务，节省电量。</li><li><strong>FastHub</strong> ：一款 GitHub 安卓客户端。做得不错，解决了 GitHub 手机网页版的一些痛点。</li></ul><h3 id="其他小设置"><a href="#其他小设置" class="headerlink" title="其他小设置"></a>其他小设置</h3><ul><li>设置安全选项，屏幕锁定，指纹。</li><li>开启系统样式随为 <strong>自动 (一天中的时间)</strong> ，这样晚上的时候系统会变成暗色，护眼又漂亮。</li><li>开启谷歌自动换壁纸，一天一个样，每天好心情。</li></ul><hr><h2 id="一些记录"><a href="#一些记录" class="headerlink" title="一些记录"></a>一些记录</h2><p>共重启 30 余次，五清重刷 2 次。耗费时间「多半天」。</p><p>带来的心里慰藉</p><ul><li>手机更干净了</li><li>全新了</li><li>没了</li></ul><p>强烈建议禁止 <code>知乎</code> 开机自启，唤醒服务，看的麻烦。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>折腾</tag>
+      
+      <tag>Android</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello My Blog</title>
+    <link href="//post/hello-my-blog:/"/>
+    <url>//post/hello-my-blog:/</url>
+    
+    <content type="html"><![CDATA[<h2 id="我是谁"><a href="#我是谁" class="headerlink" title="我是谁"></a>我是谁</h2><p>一个普通大学的软件工程大一学生，未来的苦逼程序员。但我对生活还是蛮有兴趣的，所以建了这个博客站，和大家分享些生活中的点滴。</p><h2 id="关于这个博客"><a href="#关于这个博客" class="headerlink" title="关于这个博客"></a>关于这个博客</h2><p>~~这个站现在处于试运营阶段，可能会持续一年（因为我域名和服务器都只买了一年🤪），而域名买错了，我当初要的是 <code>www.leontuan.space</code> ，改了两次，还是买错了，先这样用着，不出意外的话一年后应该会换域名🤣，到时候我通知大家，不过应该不会影响很多人，因为几乎没人看🤭。~~ </p><p>博客迁移至 GitHub Pages ，正式运营阶段开启。</p><p>我后续应该会写一篇关于 Hexo 建博客的文章，还是挺麻烦的，大家可以期待一下。</p><p>~~后续会开通评论功能，几天内吧。🥰~~  已开通。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
