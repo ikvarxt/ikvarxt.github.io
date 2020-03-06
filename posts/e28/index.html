@@ -15,7 +15,7 @@
   <meta name="description" content>
   <meta name="author" content="Leon Tuan">
   <meta name="keywords" content>
-  <title>Categories - 建站 - Leon&#39;s Blog</title>
+  <title>利用 hexo 框架和 GitHub Pages 搭建个人博客 - Leon&#39;s Blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -36,7 +36,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -111,8 +111,8 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/pawel-czerwinski-0UMy_4q6QQE-unsplash.jpg')no-repeat center center;
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/pawel-czerwinski-vBlJ2C84nf0-unsplash.jpg')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -121,6 +121,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Friday, May 10th 2019, 6:18 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    563 words
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      2 min
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> times
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -132,42 +167,106 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-<!--  <p class="h4">2 posts in total.</p>-->
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/posts/e28/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">利用 hexo 框架和 GitHub Pages 搭建个人博客</span>
-      <span style="float: right;">05-10</span>
-    </a>
-  
-    
-    <a href="/posts/bf0a/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">DISQUS 评论系统已加入</span>
-      <span style="float: right;">04-19</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。</p>
+<p>Hexo 和 GitHub Pages 给我一切。感谢。</p>
+<h2 id="本地-Hexo-环境搭建"><a href="#本地-Hexo-环境搭建" class="headerlink" title="本地 Hexo 环境搭建"></a>本地 Hexo 环境搭建</h2><p><em>软件基础：macOS Mojave</em> 。Hexo 中文文档 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
+<p>Hexo 基于 Node.js ，可利用 brew 命令安装 Node.js ，安装 npm 管理器。</p>
+<pre><code class="bash">brew install node
+brew install npm</code></pre>
+<h3 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h3><pre><code class="bash">npm install -g hexo-cil</code></pre>
+<h3 id="创建一个文件夹来存放博客的文件夹-blog"><a href="#创建一个文件夹来存放博客的文件夹-blog" class="headerlink" title="创建一个文件夹来存放博客的文件夹 blog"></a>创建一个文件夹来存放博客的文件夹 blog</h3><pre><code class="bash">mkdir blog</code></pre>
+<h3 id="初始化-hexo-网站目录"><a href="#初始化-hexo-网站目录" class="headerlink" title="初始化 hexo 网站目录"></a>初始化 hexo 网站目录</h3><pre><code class="bash">hexo init blog
+cd blog
+npm install</code></pre>
+<h2 id="创建第一篇博文"><a href="#创建第一篇博文" class="headerlink" title="创建第一篇博文"></a>创建第一篇博文</h2><p>标题为引号内的内容。</p>
+<pre><code class="bash">hexo new &quot;hello my blog&quot;</code></pre>
+<p>这时你就可以编辑位于 <code>~/blog/source/_post</code> 目录下的 <code>hello-my-blog.md</code> 文件。写写你的想法。</p>
+<p>使用 <code>hexo s</code> ，浏览器访问 <code>http://localhost:4000</code> 本地预览你的博客。适合网站发布前进行调试。</p>
+<p>我用 Typora 编辑博文， macOS 下一个十分好用的 Markdown 编辑器，亮点就是可以实时预览，还有众多主题可选。当然，你也可以直接用 Vim 来写。</p>
+<p><img src="https://i.loli.net/2019/05/10/5cd573546fb5b.png" srcset="/img/loading.gif" alt="Typora"></p>
+<h2 id="部署至-GitHub-Pages"><a href="#部署至-GitHub-Pages" class="headerlink" title="部署至 GitHub Pages"></a>部署至 GitHub Pages</h2><ol>
+<li><p>GitHub 中新建一个仓库，仓库名需为 <code>username.github.io</code> (<code>username</code> 为你的 GitHub 账号名)，才可在公网访问。<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+</li>
+<li><p>安装 git deploy 插件。<a href="https://hexo.io/zh-cn/docs/deployment#Git" target="_blank" rel="noopener">Hexo 官方文档</a></p>
+</li>
+</ol>
+<pre><code class="bash">npm install hexo-deployer-git --save</code></pre>
+<ol start="3">
+<li>修改博客本地根目录下的 <code>_config.yml</code> 配置文件。使 Git deploy 可用。</li>
+</ol>
+<pre><code class="yaml">deploy:
+    type: git
+    repo: https://github.com/username/username.github.io</code></pre>
+<p>   repo: 需改为你的 GitHub Pages 仓库地址。</p>
+<ol start="4">
+<li><p>终端执行 <code>hexo clean &amp;&amp; hexo d</code> 即可将自己的博客上传至 Git 仓库。就可以在浏览器访问了。</p>
+<p>第一次上传无需执行 <code>hexo clean</code> ，不过以后都是需要先清空生成的文件才可以部署。</p>
+</li>
+</ol>
+<h2 id="细节更改"><a href="#细节更改" class="headerlink" title="细节更改"></a>细节更改</h2><h3 id="主页信息"><a href="#主页信息" class="headerlink" title="主页信息"></a>主页信息</h3><p><a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo 配置</a> 可以修改根目录下的 <code>_config.yml</code> 来加入你的特殊信息。网站名，简介，关键字，作者等主要信息都在这里存储。</p>
+<h3 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h3><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo 主题</a> ，这里有很多优质的主题，可以挑选一个搭配自己的性格，如果有能力也可以自己写一个主题，上传到这里，让更多的人用。</p>
+<p>~~本博客使用由 <a href="https://blog.oniuo.com/" target="_blank" rel="noopener">Elmore Cheng</a> 开发的主题 <a href="https://github.com/elmorec/hexo-theme-inside" target="_blank" rel="noopener">inside</a>。~~</p>
 
-
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+              <span>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/%E5%BB%BA%E7%AB%99">建站</a>
+                  &nbsp;
+                
+              </span>&nbsp;&nbsp;
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/%E6%8A%98%E8%85%BE">折腾</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -247,6 +346,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
@@ -287,7 +391,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Category - 建站&nbsp;",
+        "利用 hexo 框架和 GitHub Pages 搭建个人博客&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 30,

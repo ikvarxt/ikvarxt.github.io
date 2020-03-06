@@ -15,7 +15,7 @@
   <meta name="description" content>
   <meta name="author" content="Leon Tuan">
   <meta name="keywords" content>
-  <title>Categories - 建站 - Leon&#39;s Blog</title>
+  <title>解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题 - Leon&#39;s Blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -36,7 +36,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -111,8 +111,8 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/pawel-czerwinski-0UMy_4q6QQE-unsplash.jpg')no-repeat center center;
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/pawel-czerwinski-vBlJ2C84nf0-unsplash.jpg')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -121,6 +121,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Tuesday, May 7th 2019, 12:17 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    520 words
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 min
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> times
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -132,42 +167,87 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-<!--  <p class="h4">2 posts in total.</p>-->
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/posts/e28/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">利用 hexo 框架和 GitHub Pages 搭建个人博客</span>
-      <span style="float: right;">05-10</span>
-    </a>
-  
-    
-    <a href="/posts/bf0a/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">DISQUS 评论系统已加入</span>
-      <span style="float: right;">04-19</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>好久以前就想买一个显示器，最近终于剁手了明基家的专业显示器 PD2500Q (我也是后来才知道这是一个专业的显示器，穷学生发出了没钱的惨叫)，连接好发现整个显示器的显示都很虚，字体也很小，降分辨率后更虚了，遂开始折腾。</p>
+<p>本篇文章整理自知乎用户 <a href="https://www.zhihu.com/question/35300978/answer/126332986" target="_blank" rel="noopener">Wenson Smith 的回答</a> 。在此记录我的折腾过程。</p>
+<hr>
+<p><strong>利用软件 SwitchResX 开启显示器的 HiDPI 渲染模式</strong></p>
+<h3 id="关闭笔记本的-SIP-系统完整性保护"><a href="#关闭笔记本的-SIP-系统完整性保护" class="headerlink" title="关闭笔记本的 SIP 系统完整性保护"></a>关闭笔记本的 SIP 系统完整性保护</h3><p>进入 macOS 恢复模式</p>
+<blockquote>
+<p>将您的 Mac 开机，然后立即在键盘上按住 Command (⌘)-R 或<a href="https://support.apple.com/zh-cn/HT204904" target="_blank" rel="noopener">其他 macOS 恢复功能组合键</a>之一。继续按住这些键，直到您看到 Apple 标志或旋转的地球。</p>
+<p>来自苹果官网</p>
+</blockquote>
+<p>打开 <strong>终端</strong> ，输入 <code>csrutil disable</code> 禁用 SIP 。<code>reboot</code> 重启电脑。</p>
+<h3 id="安装-SwitchResX"><a href="#安装-SwitchResX" class="headerlink" title="安装 SwitchResX"></a>安装 SwitchResX</h3><p><a href="http://www.madrau.com/data/switchresx/SwitchResX4.zip" target="_blank" rel="noopener">官网下载地址</a> ，按提示安装，需选择 <strong>为电脑上所有用户安装</strong> 。</p>
+<h3 id="创建一个新的管理员用户"><a href="#创建一个新的管理员用户" class="headerlink" title="创建一个新的管理员用户"></a>创建一个新的管理员用户</h3><p>注销当前用户，登录新的用户。从 <strong>系统偏好设置</strong> 面板打开 SwitchResX 。</p>
+<h3 id="更改分辨率设置"><a href="#更改分辨率设置" class="headerlink" title="更改分辨率设置"></a>更改分辨率设置</h3><p>打开你的显示器设置面板，选择 <strong>Custon Resolutions</strong> ，添加一条 Scaled resolutions 规则，设置为 <code>2160 X 3840</code> (1080p HiDPI) (我是竖屏使用) 。</p>
+<p>关闭窗口自动保存，提示输入用户密码。</p>
+<h3 id="重启电脑使设置生效"><a href="#重启电脑使设置生效" class="headerlink" title="重启电脑使设置生效"></a>重启电脑使设置生效</h3><p>再次打开 SwitchResX 设置窗口，更改显示器分辨率为 <code>1080 X 1920 (HiDPI)</code> 即可。</p>
+<p>奇迹出现。</p>
+<p>使用没有问题后， <strong>再次进入恢复模式关闭 SIP 即可</strong> 。</p>
+<h2 id="一些记录"><a href="#一些记录" class="headerlink" title="一些记录"></a>一些记录</h2><ul>
+<li>SwitchResX 可以试用 10 天。需要购买。</li>
+<li>折腾期间电脑死机 2 次，有时会出现显示器无现实的情况，不知原因。</li>
+<li>有时设置了 Scaled Resolution 规则后，不会在列表里出现 <code>1080 X 1920 (HiDPI)</code> 。重启啥的，多试几次。</li>
+<li>无法任性的切换横竖显示了，会使分辨率设置失效，有时伴随电脑死机，显示器黑屏。</li>
+</ul>
+<blockquote>
+<p>题图来自 <a href="https://unsplash.com/photos/BMnhuwFYr7w" target="_blank" rel="noopener">Unsplsh</a></p>
+</blockquote>
 
-
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/%E6%8A%98%E8%85%BE">折腾</a>
+                
+                  <a class="hover-with-bg" href="/tags/MacBook%20Pro">MacBook Pro</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -247,6 +327,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
@@ -287,7 +372,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Category - 建站&nbsp;",
+        "解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 30,

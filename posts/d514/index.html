@@ -15,7 +15,7 @@
   <meta name="description" content>
   <meta name="author" content="Leon Tuan">
   <meta name="keywords" content>
-  <title>Categories - 建站 - Leon&#39;s Blog</title>
+  <title>记一次重装 oscar 的过程 - Leon&#39;s Blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -36,7 +36,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -111,8 +111,8 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/pawel-czerwinski-0UMy_4q6QQE-unsplash.jpg')no-repeat center center;
+    <div class="view intro-2" id="background" false
+         style="background: url('/img/pawel-czerwinski-vBlJ2C84nf0-unsplash.jpg')no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -121,6 +121,41 @@
               
             </span>
 
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Thursday, April 18th 2019, 12:25 pm
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    834 words
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      3 min
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> times
+                  </span>&nbsp;
+                
+              </p>
             
           </div>
 
@@ -132,42 +167,140 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-<!--  <p class="h4">2 posts in total.</p>-->
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/posts/e28/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">利用 hexo 框架和 GitHub Pages 搭建个人博客</span>
-      <span style="float: right;">05-10</span>
-    </a>
-  
-    
-    <a href="/posts/bf0a/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">DISQUS 评论系统已加入</span>
-      <span style="float: right;">04-19</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h2 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h2><h3 id="下载各种包"><a href="#下载各种包" class="headerlink" title="下载各种包"></a>下载各种包</h3><ul>
+<li><code>RADIO-oscar-201803170847.zip</code> ，oscar 底包</li>
+<li><code>MK90.0-oscar-201904131310-NIGHTLY.zip</code> ，魔趣每夜版全量包</li>
+<li><code>open_gapps-arm64-9.0-micro-20190406.zip</code> ，谷歌 micro 版全家桶</li>
+<li><code>Magisk-v18.1.zip</code> ，Magisk 18.1 (稳定版)</li>
+<li><code>ssr-android.apk</code> ，SSR 安装包，你懂的</li>
+</ul>
+<p><em>注：</em> 将以上全部包放入 U 盘或 SD 卡中，因为这次要完全重刷，手机内置存储也要清除</p>
+<h3 id="备份手机文件"><a href="#备份手机文件" class="headerlink" title="备份手机文件"></a>备份手机文件</h3><ul>
+<li>把轻课表的课表文件拉到了电脑上，同时注册了账户，进行了云备份</li>
+<li>把纯纯写作的备份文件拉到了电脑，同时注册了 Dropbox 基础版，云备份实现</li>
+</ul>
+<h2 id="二、开始重刷"><a href="#二、开始重刷" class="headerlink" title="二、开始重刷"></a>二、开始重刷</h2><ol>
+<li><p>关机，插入你的 U 盘或 SD 卡</p>
+</li>
+<li><p>按住 <code>音量+</code> 键和 <code>电源</code> 键进入 TWRP</p>
+</li>
+<li><p>点进 Wipe =&gt; Advanced Wipe ，选中以下选项，五清</p>
+<ul>
+<li>Dalvik / ART Cache</li>
+<li>Cache</li>
+<li>System</li>
+<li>Data</li>
+<li>Internal Storage</li>
+</ul>
+<p><em>注：</em> 一般人 <strong>双清</strong> 就足够了，我这是特殊需求。</p>
+</li>
+<li><p>进 Install ，刷 <strong>底包</strong> 。<strong>刷完双清</strong> ，不要重启</p>
+</li>
+<li><p>继续刷 <strong>全量包</strong> ，<strong>刷完双清</strong></p>
+</li>
+<li><p>然后刷入 Magisk 开机调试好 Magisk 再刷 open Gapps</p>
+<p><em>记：</em> 刷入 Magisk 以后直接再刷 open-Gapps 会闪重进 Recovery 。实际好像是 Magisk 没有成功刷入。</p>
+</li>
+<li><p>重启体验</p>
+</li>
+</ol>
+<h2 id="三、开机后的调试阶段"><a href="#三、开机后的调试阶段" class="headerlink" title="三、开机后的调试阶段"></a>三、开机后的调试阶段</h2><h3 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h3><blockquote>
+<p>调试失败，重回「一」。</p>
+<blockquote>
+<p>原因：无法通过 ctsProfils 检测，后安装了 busybox &amp; MagiskHide Props Config 依旧无效，尝试终端 root 运行 props 命令改 device fingerprint ，然后炸了，Lawnchair v2 一直停止运行，然后无奈，重刷之。</p>
+</blockquote>
+</blockquote>
+<p>可安装 Magisk-v19 ，已正式发布。安装 <code>MagiskManagerMD2.apk</code> ，美化界面。</p>
+<blockquote>
+<p>垃圾，升级不了，卸之，回原版。</p>
+</blockquote>
+<p>第二次，ctsProfile 还是过不了，算了，不理那个了。</p>
+<h3 id="安装各大神器"><a href="#安装各大神器" class="headerlink" title="安装各大神器"></a>安装各大神器</h3><ul>
+<li><strong>Google Chrome</strong> ：怎么少得了呢。</li>
+<li><strong>Storage Redirect</strong> (存储重定向) ：可将一些软件在 <code>/sdcard</code> 下胡乱拉的屎（有些其实也不算屎，但是也在目录下产生了）重定向到相应包名的 <code>data</code> 下和 <code>Android/data</code> 下，保持 <code>/sdcard</code> 的清洁。</li>
+<li><strong>AppOps</strong> ：安卓权限管理工具，限制毒瘤应用随意获取权限。<ul>
+<li><strong>Shizuku Manager</strong> ：。</li>
+</ul>
+</li>
+<li><strong>Dir</strong> ：垃圾清理工具，可以以 <em>占坑</em> 的方式阻止一些应用不断生产垃圾。</li>
+<li><strong>SSR</strong> ：你懂的。</li>
+<li><strong>Telegram</strong> ：高雅的 IM 软件。</li>
+<li><strong>Google Translate</strong> ：装好以后可开启全局选中查单词，好用又不臃肿。</li>
+<li><strong>Share 微博客户端</strong> ： <em>鸡仔</em> 出品，我认为最好的微博客户端，没有之一。</li>
+<li><strong>知乎</strong> ：「学习」必备……。</li>
+<li><strong>Pure Writer</strong> (纯纯写作) ：我认为安卓端最好用的写作软件，是他让我有想在手机上写东西的冲动。（没有电脑的情况）</li>
+<li><strong>XiaoMi Push Framework</strong> (小米推送服务) ：可使一些应用使用小米系统级推送服务，节省电量。</li>
+<li><strong>FastHub</strong> ：一款 GitHub 安卓客户端。做得不错，解决了 GitHub 手机网页版的一些痛点。</li>
+</ul>
+<h3 id="其他小设置"><a href="#其他小设置" class="headerlink" title="其他小设置"></a>其他小设置</h3><ul>
+<li>设置安全选项，屏幕锁定，指纹。</li>
+<li>开启系统样式随为 <strong>自动 (一天中的时间)</strong> ，这样晚上的时候系统会变成暗色，护眼又漂亮。</li>
+<li>开启谷歌自动换壁纸，一天一个样，每天好心情。</li>
+</ul>
+<hr>
+<h2 id="一些记录"><a href="#一些记录" class="headerlink" title="一些记录"></a>一些记录</h2><p>共重启 30 余次，五清重刷 2 次。耗费时间「多半天」。</p>
+<p>带来的心里慰藉</p>
+<ul>
+<li>手机更干净了</li>
+<li>全新了</li>
+<li>没了</li>
+</ul>
+<p>强烈建议禁止 <code>知乎</code> 开机自启，唤醒服务，看的麻烦。</p>
 
-
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/Android">Android</a>
+                
+                  <a class="hover-with-bg" href="/tags/%E6%8A%98%E8%85%BE">折腾</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -247,6 +380,11 @@
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smoothscroll/SmoothScroll.min.js" ></script>
@@ -287,7 +425,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Category - 建站&nbsp;",
+        "记一次重装 oscar 的过程&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 30,
