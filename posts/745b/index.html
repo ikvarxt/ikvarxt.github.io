@@ -15,7 +15,7 @@
   <meta name="description" content>
   <meta name="author" content="Leon Tuan">
   <meta name="keywords" content>
-  <title>解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题 - Leon&#39;s Blog</title>
+  <title>升级一下我的老笔记本电脑 - Leon&#39;s Blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
@@ -126,7 +126,7 @@
               
                 <p class="mt-3">
                   <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
-                  Tuesday, May 7th 2019, 12:17 pm
+                  Tuesday, March 10th 2020, 11:43 am
                 </p>
               
 
@@ -135,7 +135,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    522 words
+                    1.5k words
                   </span>&nbsp;
                 
 
@@ -143,7 +143,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      1 min
+                      5 min
                   </span>&nbsp;
                 
 
@@ -176,34 +176,45 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <p>好久以前就想买一个显示器，最近终于剁手了明基家的专业显示器 PD2500Q (我也是后来才知道这是一个专业的显示器，穷学生发出了没钱的惨叫)，连接好电脑发现整个显示器的显示都很虚，字体也很小，降分辨率后更虚了，遂开始折腾。</p>
+            <p>升级了下老笔电，优化系统以后，可以达到 16 秒内开机，非常的爽。现在已经强力升级为我的 Windows 工作站了（虽然我几乎不用 Windows）。</p>
 <a id="more"></a>
 
-<p>本篇文章整理自知乎用户 <a href="https://www.zhihu.com/question/35300978/answer/126332986" target="_blank" rel="noopener">Wenson Smith 的回答</a> 。在此记录我的折腾过程。</p>
-<hr>
-<p><strong>利用软件 SwitchResX 开启显示器的 HiDPI 渲染模式</strong></p>
-<h3 id="关闭笔记本的-SIP-系统完整性保护"><a href="#关闭笔记本的-SIP-系统完整性保护" class="headerlink" title="关闭笔记本的 SIP 系统完整性保护"></a>关闭笔记本的 SIP 系统完整性保护</h3><p>进入 macOS 恢复模式</p>
-<blockquote>
-<p>将您的 Mac 开机，然后立即在键盘上按住 Command (⌘)-R 或<a href="https://support.apple.com/zh-cn/HT204904" target="_blank" rel="noopener">其他 macOS 恢复功能组合键</a>之一。继续按住这些键，直到您看到 Apple 标志或旋转的地球。</p>
-<p>来自苹果官网</p>
-</blockquote>
-<p>打开 <strong>终端</strong> ，输入 <code>csrutil disable</code> 禁用 SIP 。<code>reboot</code> 重启电脑。</p>
-<h3 id="安装-SwitchResX"><a href="#安装-SwitchResX" class="headerlink" title="安装 SwitchResX"></a>安装 SwitchResX</h3><p><a href="http://www.madrau.com/data/switchresx/SwitchResX4.zip" target="_blank" rel="noopener">官网下载地址</a> ，按提示安装，需选择 <strong>为电脑上所有用户安装</strong> 。</p>
-<h3 id="创建一个新的管理员用户"><a href="#创建一个新的管理员用户" class="headerlink" title="创建一个新的管理员用户"></a>创建一个新的管理员用户</h3><p>注销当前用户，登录新的用户。从 <strong>系统偏好设置</strong> 面板打开 SwitchResX 。</p>
-<h3 id="更改分辨率设置"><a href="#更改分辨率设置" class="headerlink" title="更改分辨率设置"></a>更改分辨率设置</h3><p>打开你的显示器设置面板，选择 <strong>Custon Resolutions</strong> ，添加一条 Scaled resolutions 规则，设置为 <code>2160 X 3840</code> (1080p HiDPI) (我是竖屏使用) 。</p>
-<p>关闭窗口自动保存，提示输入用户密码。</p>
-<h3 id="重启电脑使设置生效"><a href="#重启电脑使设置生效" class="headerlink" title="重启电脑使设置生效"></a>重启电脑使设置生效</h3><p>再次打开 SwitchResX 设置窗口，更改显示器分辨率为 <code>1080 X 1920 (HiDPI)</code> 即可。</p>
-<p>奇迹出现。</p>
-<p>使用没有问题后， <strong>再次进入恢复模式关闭 SIP 即可</strong> 。</p>
-<h2 id="一些记录"><a href="#一些记录" class="headerlink" title="一些记录"></a>一些记录</h2><ul>
-<li>SwitchResX 可以试用 10 天。需要购买。</li>
-<li>折腾期间电脑死机 2 次，有时会出现显示器无现实的情况，不知原因。</li>
-<li>有时设置了 Scaled Resolution 规则后，不会在列表里出现 <code>1080 X 1920 (HiDPI)</code> 。重启啥的，多试几次。</li>
-<li>无法任性的切换横竖显示了，会使分辨率设置失效，有时伴随电脑死机，显示器黑屏。</li>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>老笔记本电脑是姐姐上学用的联想 G470，大约 2011 年购买，安装 Windows 10 已经无法流畅运行，Windows 7 用起来还可以接受。</p>
+<p>升级前配置：</p>
+<ul>
+<li>Inter Core i3 2310M</li>
+<li>Inter HD Graphics 3000 （集显）和 AMD Radeon HD 6370M 双显卡</li>
+<li>2GB 三星 DDR3 1333MHz</li>
+<li>西部数据蓝盘 500GB HDD 5400 转 （硬盘换过一次，原来的被我拆着玩了）</li>
 </ul>
-<blockquote>
-<p>题图来自 <a href="https://unsplash.com/photos/zEBqF_E2FIY" target="_blank" rel="noopener">Unsplsh</a></p>
+<p>随便看了几篇网友升级 G470 的帖子，主流方案是升级内存和 SSD，HM65 芯片组倒是也可以把处理器升级到 i7-2670QM，不过感觉也没什么必要，而且升级处理器发热量巨大，这单铜管，小风扇还是算了吧。</p>
+<p>最后买到了几乎是全网最便宜的全新 120GB SATA SSD（朗科）和 4GB DDR3-1600（光威）（也不知道能用多久，反正先用着，至少目前没有什么问题），顺手买了光驱位硬盘架和一小管硅脂，电脑快十年了，硅脂都成硅脂干儿了，一定要换一下。</p>
+<p>最终将硬盘升级为 120GB SSD + 500GB 机械，内存 2GB DDR3-1333MHz + 4GB DDR3-1600MHz，共 6 GB。（内存会自动降频到 1333 的，处理器限制）</p>
+<h2 id="开始升级"><a href="#开始升级" class="headerlink" title="开始升级"></a>开始升级</h2><blockquote>
+<p>如果要安装光驱位硬盘，应在<strong>关机前弹出光驱</strong>，否则光驱最外面的壳将无法取下，新买的光驱位不适配电脑的优美曲线。</p>
 </blockquote>
+<p>G470 清灰、升级 CPU、换内存条、换硬盘都不需要完全拆开 D 面，只需要拆开升级用的小窗口就行，很方便的。</p>
+<p><img src="https://i.loli.net/2020/03/10/uAKz9LJ6cORI54w.jpg" srcset="/img/loading.gif" alt="D壳"><br><img src="https://i.loli.net/2020/03/10/TlZp3dOQDjE8iGa.jpg" srcset="/img/loading.gif" alt="拆开后"></p>
+<blockquote>
+<p>进行所有拔插操作前一定要先断开电源以保证安全，所以我建议最好拆开 D 面之前就拔下电池，要不然特别容易忘掉。内存条刚快递回来我就比较着急，直接装了上去，还好没出什么问题，想想真是害怕。</p>
+</blockquote>
+<p>内存条直接插，就是要保证插好，有防呆口设计的，不至于有人硬怼吧。<strong>安装完成后无法开机有很大概率是内存条没有插好，重新拔插基本可以解决问题。</strong></p>
+<p>硬盘拧开下方两颗螺丝，向下抽出即可。直接换上 SSD。<strong>注意硬盘正反。</strong></p>
+<p>光驱位只由一颗螺丝固定，拧开就可抽出光驱位。原来的硬盘直接装上。取下光驱上最外边的塑料壳，装到硬盘拖上面就行，不过硬盘拖制造成本低廉，精确性比较低，可能会不大契合。比如我的塑料外壳就无法固定到硬盘拖上，所以直接速干胶解千仇。</p>
+<p>至此呢，升级工作就完成了，其实是非常方便的。</p>
+<h2 id="顺路清灰维护"><a href="#顺路清灰维护" class="headerlink" title="顺路清灰维护"></a>顺路清灰维护</h2><p>硅脂也买了，机器也拆了，不清灰维护一下怎么行呢。</p>
+<p>主要目标就是风扇和铜管组成的散热系统，二话不说直接拆。</p>
+<p><img src="https://i.loli.net/2020/03/10/cDNIvpjik2JWyqQ.jpg" srcset="/img/loading.gif" alt="散热特写"></p>
+<p>风扇还可以拆开擦擦里面的扇叶，内壳什么的。铜管上的鳍片也吹吹灰尘。硅脂擦干净涂新的。理论上不要涂太多，不过老机器也没有那么多讲究，不过，硅脂涂得多也不代表散热强啊。</p>
+<p>好像没什么可说的，硅脂涂了，铜管装上去，再装风扇，<strong>记得插上风扇电源线</strong>。</p>
+<p>不要着急装机。插上电源，开机试一下，能开起来的话就可以装机了， 不能开的话重新拔插一下内存条，如果这样还没有动静的话……那这就…… <del>恭喜你，成功让自己的笔记本电脑退休了。</del> 我不知道，我什么都没说。</p>
+<h2 id="装系统，测试"><a href="#装系统，测试" class="headerlink" title="装系统，测试"></a>装系统，测试</h2><p>原硬盘和新 SSD 装好，系统还是会从机械硬盘引导，开起来制作一个 Windows 10 U 盘启动盘，然后将系统装到 SSD 中就行了，没啥难度。没换 SSD 之前我也天天装系统，从没有这么快装好过，这个速度可是太舒服了。</p>
+<p>开机速度的提升非常明显，从先前的 3 分钟锐减到 20 几秒，别提多爽了。系统盘的拷贝速度大致为 300 - 400 MB/s，对于一个几乎 10 年前的笔记本来说已经是飞快了。我很满意。</p>
+<p>待机内存占用 1.5GB 左右，还剩 4 GB 多。非常的富裕。比起之前 Windows 7 系统 700MB 的占用，Windows 10 要重不少，原来 2GB 的内存根本不可能流畅运行。现在系统开启透明效果，后台应用随便开，都不成问题。妈妈再也不用担心我的电脑性能不够了。</p>
+<h2 id="一个小坑"><a href="#一个小坑" class="headerlink" title="一个小坑"></a>一个小坑</h2><p>我这里遇到了开机黑屏好长时间才进系统的问题。翻帖子发现是集显导致的，直接在组策略编辑器里把下列两个值设为 <code>0</code> 即可，完美解决。</p>
+<pre><code>[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4D36E968-E325-11CE-BFC1-08002BE10318}\[b]0000[/b]]
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4D36E968-E325-11CE-BFC1-08002BE10318}\[b]0001[/b]]</code></pre><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>此次升级非常成功，共花销 300 多元。刚开始还害怕买一堆垃圾回来翻车呢，现在用的可真香。这篇文章就是在笔电上用 Typora 写的。比起 MBP 的钢板键盘，这把巧克力键盘用起来还是挺舒服的。只不过屏幕有点让人眼瞎，回学校外接显示器就要好多了（可以考虑拆了屏幕的当迷你主机用）。</p>
+<p>好了，如果你看到了这里，还有什么问题的话，可以给我发邮件，或直接在文章下方评论，期待与你讨论。感谢阅读。 </p>
 
             <hr>
           </div>
@@ -216,8 +227,6 @@
                 <i class="iconfont icon-tag"></i>
                 
                   <a class="hover-with-bg" href="/tags/%E6%8A%98%E8%85%BE">折腾</a>
-                
-                  <a class="hover-with-bg" href="/tags/MacBook%20Pro">MacBook Pro</a>
                 
               </span>
             
@@ -423,7 +432,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题&nbsp;",
+        "升级一下我的老笔记本电脑&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 30,
