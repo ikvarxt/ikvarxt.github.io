@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Leon&#39;s Blog</title>
+  <icon>https://dreamleon.github.io/icon.png</icon>
+  <subtitle>啦啦啦?!!</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://dreamleon.github.io/"/>
+  <updated>2020-03-15T15:07:17.206Z</updated>
+  <id>https://dreamleon.github.io/</id>
+  
+  <author>
+    <name>Leon Tuan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3/10/2020 博客更新记录</title>
+    <link href="https://dreamleon.github.io/posts/f87e/"/>
+    <id>https://dreamleon.github.io/posts/f87e/</id>
+    <published>2020-03-10T11:37:29.000Z</published>
+    <updated>2020-03-15T15:07:17.206Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近博客有比较大的变化，这里记录一下下。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="建站" scheme="https://dreamleon.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>升级一下我的老笔记本电脑</title>
+    <link href="https://dreamleon.github.io/posts/745b/"/>
+    <id>https://dreamleon.github.io/posts/745b/</id>
+    <published>2020-03-10T03:43:50.000Z</published>
+    <updated>2020-03-10T13:45:55.558Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;升级了下老笔电，优化系统以后，可以达到 16 秒内开机，非常的爽。现在已经强力升级为我的 Windows 工作站了（虽然我几乎不用 Windows）。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="折腾" scheme="https://dreamleon.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>再也不用去按角落里的方向键了</title>
+    <link href="https://dreamleon.github.io/posts/491a/"/>
+    <id>https://dreamleon.github.io/posts/491a/</id>
+    <published>2019-10-19T05:07:01.000Z</published>
+    <updated>2020-03-10T10:42:33.512Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;利用一些软件，或者直接修改系统的键位配置文件来实现将方向键移到和 Vim 一样的键位。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="折腾" scheme="https://dreamleon.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+      <category term="效率提升" scheme="https://dreamleon.github.io/tags/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 hexo 框架和 GitHub Pages 搭建个人博客</title>
+    <link href="https://dreamleon.github.io/posts/e28/"/>
+    <id>https://dreamleon.github.io/posts/e28/</id>
+    <published>2019-05-10T10:18:28.000Z</published>
+    <updated>2020-03-10T11:52:43.550Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;9102 年，搭建博客的成本已经趋于 0 了，不需要任何钱钱，免费的服务到处都是，记录我的博客搭建过程。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="建站" scheme="https://dreamleon.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="折腾" scheme="https://dreamleon.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决 MacBook Pro 连接 2K 显示器带来的字体发虚问题</title>
+    <link href="https://dreamleon.github.io/posts/f1cd/"/>
+    <id>https://dreamleon.github.io/posts/f1cd/</id>
+    <published>2019-05-07T04:17:20.000Z</published>
+    <updated>2020-03-24T14:29:50.168Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;好久以前就想买一个显示器，最近终于剁手了明基家的专业显示器 PD2500Q (我也是后来才知道这是一个专业的显示器，穷学生发出了没钱的惨叫)，连接好电脑发现整个显示器的显示都很虚，字体也很小，降分辨率后更虚了，遂开始折腾。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="MacBook Pro" scheme="https://dreamleon.github.io/tags/MacBook-Pro/"/>
+    
+      <category term="折腾" scheme="https://dreamleon.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DISQUS 评论系统已加入</title>
+    <link href="https://dreamleon.github.io/posts/bf0a/"/>
+    <id>https://dreamleon.github.io/posts/bf0a/</id>
+    <published>2019-04-19T14:09:43.000Z</published>
+    <updated>2020-03-10T10:42:01.082Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;各位读者现在可以尽情评论了，说出你们的观点吧，轻喷。🥰&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="建站" scheme="https://dreamleon.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记一次重装 oscar 的过程</title>
+    <link href="https://dreamleon.github.io/posts/d514/"/>
+    <id>https://dreamleon.github.io/posts/d514/</id>
+    <published>2019-04-18T04:25:58.000Z</published>
+    <updated>2020-03-10T10:42:16.259Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、准备&quot;&gt;&lt;a href=&quot;#一、准备&quot; class=&quot;headerlink&quot; title=&quot;一、准备&quot;&gt;&lt;/a&gt;一、准备&lt;/h2&gt;&lt;h3 id=&quot;下载各种包&quot;&gt;&lt;a href=&quot;#下载各种包&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="折腾" scheme="https://dreamleon.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+      <category term="Android" scheme="https://dreamleon.github.io/tags/Android/"/>
+    
+  </entry>
+  
+</feed>
