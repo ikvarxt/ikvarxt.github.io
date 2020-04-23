@@ -16,7 +16,7 @@
   <meta name="description" content="瞎折腾大王">
   <meta name="author" content="ikvarxt">
   <meta name="keywords" content="技术，自由，开源，独立博客">
-  <title>3/10/2020 博客更新记录 - ikvarxt</title>
+  <title>test: RSS 订阅代码格式 - ikvarxt</title>
 
   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css">
@@ -137,8 +137,8 @@
               
                 <div class="mt-3 post-meta">
                   <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-                  <time datetime="2020-03-10 19:37">
-                    Tuesday, March 10th 2020, 7:37 pm
+                  <time datetime="2020-04-23 11:28">
+                    Thursday, April 23rd 2020, 11:28 am
                   </time>
                 </div>
               
@@ -148,7 +148,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    466 words
+                    773 words
                   </span>
                 
 
@@ -158,7 +158,7 @@
                       <i class="iconfont icon-clock-fill"></i>
                     
                     
-                    4
+                    15
                      min
                   </span>
                 
@@ -187,34 +187,148 @@
           <div class="post-content mx-auto" id="post">
             
               <p class="note note-warning">
-                本文最后更新于：Sunday, March 15th 2020, 11:07 pm
+                本文最后更新于：Thursday, April 23rd 2020, 11:29 am
               </p>
             
             <article class="markdown-body">
-              <p>最近博客有比较大的变化，这里记录一下下。</p>
-<a id="more"></a>
+              <a id="more"></a>
 
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>几天前将博客主题换成了 <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">Fluid</a>，很喜欢，是我最爱的 Material Design。感觉优雅了好多。感谢开发者。</p>
-<p>今天把站内所有大图压了一下，现阶段所有页面的大图都来自 Unsplash「感谢 Unsplash」，都比较大，访问时候割裂感比较严重，今天统一处理了，压缩重新上传图床。</p>
-<h2 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h2><p>本站原来使用 Disqus 评论系统，无奈中国无法访问，虽说告诉大家加入了评论，但是大家却看不到入口，很是尴尬。</p>
-<p>浏览各路大神博客的时候发现 Valine 使用挺多，我也想试试。在原生支持 Valine 评论的主题里启用 Valine 非常方便，最重要的就是要申请一个 LeanCloud 的账户来存储评论数据。一开始申请了一个 LeanCloud 中国版，吓我一跳，邮箱也验证了，手机号也验证了，赶忙注销换了国际版。</p>
-<p>（更新，使用国际版 LeanCloud 还是不能被国内访问到。算了算了，这年头出门还是随手提把梯子吧）</p>
-<h2 id="页面链接"><a href="#页面链接" class="headerlink" title="页面链接"></a>页面链接</h2><p>以前页面的链接使用 post 的文件名定位，无论用中文还是英文都又臭又长，中文又转码为乱七八糟的东西看着更烦，发现了大神写的随机数字定位命名方式: <a href="https://github.com/rozbo/hexo-abbrlink" target="_blank" rel="noopener">abbrlink</a>，很优雅，我喜欢。</p>
-<p>配置使用了 alg:crc16/rep:hex，crc16 已经非常多了，都让我不禁畅想，什么时候才能水 65535 篇博文呢？四位字母数字组合比较简洁，也比较合我这程序员的调性，就这样配置了。</p>
-<hr>
-<p>About me 还在努力中，上一版不堪入目，希望新一版会让大家舒服点。</p>
+<pre><code class="hljs html">&lt;!DOCTYPE html&gt;
+&lt;html lang="&lt;%= config.language %&gt;"&gt;
 
+&lt;%
+var subtitle = page.subtitle || page.title
+var banner_img = page.banner_img || theme.index.banner_img
+var banner_img_height = page.banner_img_height || theme.index.banner_img_height
+var banner_mask_alpha = page.banner_mask_alpha || theme.index.banner_mask_alpha
+%&gt;
+
+&lt;%- partial('_partial/head') %&gt;
+
+&lt;body&gt;
+  &lt;header style="height: &lt;%- banner_img_height %&gt;vh;"&gt;
+    &lt;%- partial('_partial/nav') %&gt;
+    &lt;div class="view intro-2" id="background" &lt;%- theme.banner_parallax &amp;&amp; 'parallax=true' %&gt;
+         style="background: url('&lt;%- url_for(banner_img) %&gt;') no-repeat center center;
+           background-size: cover;"&gt;
+      &lt;div class="full-bg-img"&gt;
+        &lt;div class="mask flex-center" style="background-color: rgba(0, 0, 0, &lt;%= parseFloat(banner_mask_alpha) %&gt;)"&gt;
+          &lt;div class="container text-center white-text fadeInUp"&gt;
+            &lt;span class="h2" id="subtitle"&gt;
+              &lt;% if(theme.fun_features.typing.enable == false) &#123; %&gt;
+                &lt;%- subtitle %&gt;
+              &lt;% &#125; %&gt;
+            &lt;/span&gt;
+
+            &lt;% if(is_post()) &#123; %&gt;
+              &lt;% if (theme.post.meta.date.enable) &#123; %&gt;
+                &lt;div class="mt-3 post-meta"&gt;
+                  &lt;i class="iconfont icon-date-fill" aria-hidden="true"&gt;&lt;/i&gt;
+                  &lt;time datetime="&lt;%= full_date(page.date, 'YYYY-MM-DD HH:mm') %&gt;"&gt;
+                    &lt;%= full_date(page.date, theme.post.meta.date.format) %&gt;
+                  &lt;/time&gt;
+                &lt;/div&gt;
+              &lt;% &#125; %&gt;
+
+              &lt;div class="mt-1"&gt;
+                &lt;% if (theme.post.meta.wordcount.enable) &#123; %&gt;
+                  &lt;% var wordcount_texts = theme.post.meta.wordcount.format.split('&#123;&#125;') %&gt;
+                  &lt;span class="post-meta mr-2"&gt;
+                    &lt;i class="iconfont icon-chart"&gt;&lt;/i&gt;
+                    &lt;%- wordcount_texts[0] %&gt;&lt;%- wordcount(page.content) %&gt;&lt;%- wordcount_texts[1] %&gt;
+                  &lt;/span&gt;
+                &lt;% &#125; %&gt;
+
+                &lt;% if (theme.post.meta.min2read.enable) &#123; %&gt;
+                  &lt;% var min2read_texts = theme.post.meta.min2read.format.split('&#123;&#125;') %&gt;
+                  &lt;span class="post-meta mr-2"&gt;
+                      &lt;i class="iconfont icon-clock-fill"&gt;&lt;/i&gt;
+                    &lt;% var words = parseInt(theme.post.meta.min2read.words) %&gt;
+                    &lt;%- min2read_texts[0] %&gt;
+                    &lt;%- min2read(page.content, &#123; cn: words, en: words / 2 &#125;) %&gt;
+                    &lt;%- min2read_texts[1] %&gt;
+                  &lt;/span&gt;
+                &lt;% &#125; %&gt;
+
+                &lt;% if (theme.post.meta.views.enable) &#123; %&gt;
+                  &lt;!-- 不蒜子统计文章PV --&gt;
+                  &lt;% var views_texts = theme.post.meta.views.format.split('&#123;&#125;') %&gt;
+                  &lt;span id="busuanzi_container_page_pv" class="post-meta" style="display: none"&gt;
+                    &lt;i class="iconfont icon-eye" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;%- views_texts[0] %&gt;&lt;span id="busuanzi_value_page_pv"&gt;&lt;/span&gt;&lt;%- views_texts[1] %&gt;
+                  &lt;/span&gt;
+                &lt;% &#125; %&gt;
+              &lt;/div&gt;
+            &lt;% &#125; %&gt;
+          &lt;/div&gt;
+
+          &lt;% if (theme.scroll_down_arrow.enable &amp;&amp; theme.scroll_down_arrow.banner_height_limit &lt;= banner_img_height) &#123; %&gt;
+            &lt;div class="scroll-down-bar"&gt;
+              &lt;i class="iconfont icon-arrowdown"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;% &#125; %&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;% if(is_post() || page.layout == '404') &#123; %&gt;
+      &lt;%- body %&gt;
+    &lt;% &#125; else &#123; %&gt;
+      &lt;div class="container nopadding-md"&gt;
+        &lt;div class="py-5" id="board"
+          &lt;%- banner_img_height &gt;= 100 &amp;&amp; theme.banner_parallax ? 'style=margin-top:0' : '' %&gt;&gt;
+          &lt;% if(page.layout == 'about') &#123; %&gt;
+            &lt;div class="about-avatar"&gt;
+              &lt;img src="&lt;%- url_for(theme.about.avatar) %&gt;"
+                   class="img-fluid" alt="avatar"&gt;
+            &lt;/div&gt;
+          &lt;% &#125; %&gt;
+          &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="col-12 col-md-10 m-auto"&gt;
+                &lt;%- body %&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;% &#125; %&gt;
+  &lt;/main&gt;
+
+  &lt;% if (theme.scroll_top_arrow.enable) &#123; %&gt;
+    &lt;a id="scroll-top-button" href="#" role="button"&gt;
+      &lt;i class="iconfont icon-arrowup" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;% &#125; %&gt;
+
+  &lt;% if (theme.search.enable) &#123; %&gt;
+    &lt;%- partial('_partial/search') %&gt;
+  &lt;% &#125; %&gt;
+
+  &lt;% if (theme.aplayer &amp;&amp; theme.aplayer.enable &amp;&amp; theme.aplayer.songs) &#123; %&gt;
+    &lt;!-- APlayer 音乐播放器 --&gt;
+    &lt;div id="aplayer"&gt;&lt;/div&gt;
+    &lt;%- partial('_partial/plugins/aplayer.ejs') %&gt;
+  &lt;% &#125; %&gt;
+
+  &lt;% if (theme.custom_html) &#123; %&gt;
+    &lt;div class="col-lg-7 mx-auto nopadding-md"&gt;
+      &lt;div class="container custom mx-auto"&gt;
+        &lt;%- theme.custom_html %&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;% &#125; %&gt;
+
+  &lt;%- partial('_partial/footer', &#123; data: &#123; 'subtitle': subtitle &#125; &#125;) %&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
             </article>
             <hr>
             <div>
               <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/建站/">建站</a>
-                    
-                  </div>
                 
                 
               </div>
@@ -226,18 +340,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/posts/4dd1/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">test: RSS 订阅代码格式</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/posts/745b/">
-                        <span class="hidden-mobile">升级一下我的老笔记本电脑</span>
+                      <a href="/posts/f87e/">
+                        <span class="hidden-mobile">3/10/2020 博客更新记录</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -437,7 +545,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "3/10/2020 博客更新记录&nbsp;",
+        "test: RSS 订阅代码格式&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 30,
