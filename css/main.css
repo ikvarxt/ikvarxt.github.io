@@ -594,7 +594,7 @@ a.beian-police img {
   overflow: visible;
 }
 .markdown-body pre code {
-  font-size: 85%;
+  font-size: 100%;
   display: block;
   overflow-x: auto;
   padding: 0.5rem 0;
@@ -795,6 +795,10 @@ input[type=checkbox]:checked:after {
   bottom: 0.0625rem;
   width: 0.125rem;
   height: 0.875rem;
+}
+.mt-5,
+.my-5 {
+  margin-top: 1rem !important;
 }
 .index-card {
   margin-bottom: 2.5rem;
