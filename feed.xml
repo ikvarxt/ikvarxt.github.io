@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ikvarxt 的小黑屋</title>
-  <icon>https://ikvarxt.github.io/icon.png</icon>
+  <icon>https://ikvarxt.github.io/img/avatar.jpg</icon>
   <subtitle>啦啦啦?!! 咿呀咿呀</subtitle>
   <link href="//feed.xml" rel="self"/>
   
   <link href="https://ikvarxt.github.io/"/>
-  <updated>2020-04-27T06:42:02.583Z</updated>
+  <updated>2020-08-15T08:18:53.526Z</updated>
   <id>https://ikvarxt.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我在用的一些主力生产力、学习工具分享</title>
+    <link href="https://ikvarxt.github.io/posts/dcf1/"/>
+    <id>https://ikvarxt.github.io/posts/dcf1/</id>
+    <published>2020-08-14T14:59:42.000Z</published>
+    <updated>2020-08-15T08:18:53.526Z</updated>
+    
+    <content type="html"><![CDATA[<p>这篇文章的想法来自我的一位朋友问我平时在使用什么软件，简单交流之后决定写个文来介绍介绍。鸽了好久的博客终于开张了，希望看到文章的你能有一些收获。</p><a id="more"></a><p>开始构思这篇文章的时候总是想怎么分类，以什么顺序来介绍这么多软件和服务。绞尽脑汁，放弃了这种分类，决定用意识流来写，想起哪个写哪个，相信自然会有一些必要地联系。</p><h2 id="TickTick"><a href="#TickTick" class="headerlink" title="TickTick"></a>TickTick</h2><p>我最常使用的软件，第一个就是 <a href="https://ticktick.com/" target="_blank" rel="noopener">TickTick</a>，国内版名称滴答清单。我用来管理我平常的任务，日程，也用来捕捉日程生活中的奇思妙想，好心情，坏心情。现在我的生活几乎不能没有它。</p><p><img src="https://i.loli.net/2020/08/15/4Uyguqt6xcX53iw.png" srcset="/img/loading.gif" alt="TickTick for macOS"></p><p>全平台，不会掉链子。移动端配合 Siri 添加任务，方便！桌面端直接快捷键创建新任务，不会打乱办公的节奏，更不会错过每一个精彩的想法。</p><blockquote><p>「再多提一嘴，我特意废弃了滴答清单所提供的「今天」清单，因为一旦有了「今天」这个概念，就反而会让人忽略「下一步行动」这个清单，误以为「今天」（隐喻着「今天的事情最紧急」）清单列表里的事情是今天最值得做的，一旦有了期限，就又有了压力。」<br>from 吕立青_JimmyLv</p></blockquote><p><strong>推荐阅读：</strong><a href="https://sspai.com/post/39960" target="_blank" rel="noopener"> 《搞定》最佳实践：如何利用滴答清单（TickTick）实践 GTD 理念？ </a></p><h2 id="Obsidian"><a href="#Obsidian" class="headerlink" title="Obsidian"></a>Obsidian</h2><p>知识管理工具 <a href="https://obsidian.md" target="_blank" rel="noopener">Obsidian</a>，最近掀起一股风的 <a href="https://roamresearch.com/" target="_blank" rel="noopener">Roam reserach</a> 的免费替代品，开源社区驱动，我很喜欢。现在在做我的知识体系构建软件。</p><p><img src="https://i.loli.net/2020/08/15/SgjHkYhsoG57MlL.png" srcset="/img/loading.gif" alt="Obsidian app"></p><p>双向链接关联起来每篇笔记的关键点，形成一张网，一眼就可以看到最重要的部分，不断保存笔记，关联笔记，逐步建立起个人的知识体系。使用存储在本地的 Markdown 文件作为存储介质。管理、迁移非常方便。</p><p>这里分享前几天看到的翠翠的博文，<a href="https://idealclover.top/archives/625/" target="_blank" rel="noopener">2020 年，或许你应当试试这样记笔记</a>。很好的传达了我想说的话（我的水平写不出来，太失败了！）。</p><h2 id="MoneyWiz-3"><a href="#MoneyWiz-3" class="headerlink" title="MoneyWiz 3"></a>MoneyWiz 3</h2><p>全力个人记账工具，功能非常强大，可生成 30 多种报表，深度分析消费情况。对账用的小对钩也是很贴心的功能，好好利用，基本不会漏掉一笔。</p><p><img src="https://i.loli.net/2020/08/15/9vQIsG3xdB4RfFJ.png" srcset="/img/loading.gif" alt="MoneyWiz 3">XDpv.png)</p><p>回想起来，记账已经快两年了，当初只是为了看看每一笔钱都花在了什么地方，坚持每天不差一分一厘的记着。到现在，随着大佬们的文章，记账体系变了几次，对于记账也有了新的理解，从只是一味的记录，到慢慢使用报表分析自己的消费习惯，再到利用预算功能规划自己的钱包，每一次进步都会带来不同的感受。为了学习使用 MoneyWiz 诸多强大的功能，还买了李大超人Leo 的<a href="https://sspai.com/series/3" target="_blank" rel="noopener">从零开始做好个人记账</a>。</p><p>我日常只在电脑上记，不需要付费版的同步功能，曾在 Setapp 上试用过一段时间，同步的效果也不尽人意，一端修改过多设置时就可能会发生同步冲突的问题。</p><p>一天结束，翻出来微信、支付宝的消费记录，一笔一笔记上去，还怪有成就感的。（不过，对于省钱、理财，还是没有什么进展😬。<br><img src="https://i.loli.net/2020/08/14/KAdnViQmuDSxTI6.jpg" srcset="/img/loading.gif" alt="我怎么就管不住这手呢.jpeg"></p><h2 id="Ulysses"><a href="#Ulysses" class="headerlink" title="Ulysses"></a>Ulysses</h2><p>优雅的文本写作工具，值得拥有。本文就是在 Ulysses 的帮助下完成，使用体验真的是很棒啊！！</p><p><img src="https://i.loli.net/2020/08/15/2mzaCn8YJbtiMjK.png" srcset="/img/loading.gif" alt="Ulysses 打字机模式"></p><p>非常喜欢在打字机模式 focus 到句子上，写的时候很专注于当前的一句，也很利于逐句的对文章进行修改校对。需要浏览上下文时，只要随便滑动页面，就会暂时取消打字机模式，很方便的。</p><p>只上架苹果全家桶，并使用 iCloud 同步。也可管理本地文件，写博客利器，增加你的产量。</p><p>优雅。</p><h2 id="XMind-ZEN"><a href="#XMind-ZEN" class="headerlink" title="XMind ZEN"></a>XMind ZEN</h2><p>脑图工具，一直从老版本用到新发布的  ZEN 版，至今还在试用，真是太良心了，我只做知识整理、构建大纲用，输出时有水印与我无瓜，还能给软件宣传宣传，挺好。</p><p>要说他和其他脑图工具相比有什么优缺点，我也没有研究，只是个人一直在用。</p><h2 id="Reeder"><a href="#Reeder" class="headerlink" title="Reeder"></a>Reeder</h2><p>几个月前开始折腾 RSS 订阅，先后试玩部署过 <a href="https://tt-rss.org" target="_blank" rel="noopener">Tiny Tiny RSS</a>、<a href="https://miniflux.app" target="_blank" rel="noopener">Miniflux</a>。听闻 Reeder 4 功能强大，界面漂亮，风格沉稳，遂直接入手。后来因 TTRSS 订阅不太稳定，服务器也不长时间持有，就没有重度依赖，转为 Reeder 本地账号订阅了。截止本文编辑时，未读订阅源还有 385 个，唉，曾经那个清空 Inbox 的少年回不来了。（阅读各路大佬文章看到的 RSS 订阅截图，还没见过未读为零的🤪）。</p><p><img src="https://i.loli.net/2020/08/14/73fLWVYQP5MgE26.png" srcset="/img/loading.gif" alt="20000+ 的未读标签"></p><p>也是苹果生态内软件，只提供 iOS、iPadOS、macOS 版本。软件并不提供多端同步，如果需要可使用自搭建（TTRSS）或者 Feedly 等服务。（Reeder for macOS 免费领取了，需要多端同步的我权衡之下加入了 Feedly 的大家庭，本来想用 Inoreader 的，不过免费版有广告这不能忍吧）</p><p><strong>就在写本文的过程中，Reeder 4 全平台限免啦，oh my god，试问谁能抵得住这股诱惑，冲啊，兄弟们。</strong></p><p><img src="https://i.loli.net/2020/08/15/wM1rq6RnpLHK2Bh.png" srcset="/img/loading.gif" alt="Reeder 4 for macOS"></p><p><a href="https://docs.rsshub.app/" target="_blank" rel="noopener">RSSHub</a> 是一个太棒的项目了，make RSS great again，吹爆 <a href="https://diygod.me" target="_blank" rel="noopener">DIYgod</a>。大神们适配了各种平台服务，高度整合了各种消息推送，可以节省好多时间。推荐给每个人。</p><h2 id="Spotify"><a href="#Spotify" class="headerlink" title="Spotify"></a>Spotify</h2><p>两个月前上车了 Spotify，真香！拼车的价格完全可以接受，我主要听欧美歌曲也基本不会出现歌不全的情况。多平台接力播放很舒服的，在电脑上写代码听歌，出门直接转到手机上播放，顺滑。</p><p>平时学习，写文的时候都会听歌，所以也就写进来了。</p><p>最近港区、日区都上线了歌词功能，不知道什么时候轮到美区，期待🥰。</p><h2 id="Notion"><a href="#Notion" class="headerlink" title="Notion"></a>Notion</h2><p>也是最近半年了被吹爆了的效率工具，不过我并不是太喜欢，原因有三：</p><ol><li>加载有点慢。实在是难以忍受几秒的加载时间。其实也没有多慢，但就是感觉很慢。</li><li>学习曲线有些陡，经常性劝退。</li><li>无法离线，倒不是离线有多重要，非要不可，而是这种使用体验要差一些。</li></ol><p>所以我只在上面维护几个小项目，像我的书库啦，观影记录啦什么的，曾想在上面写周报，不过垃圾如我，失败了。</p><h2 id="写-bug-工具"><a href="#写-bug-工具" class="headerlink" title="写 bug 工具"></a>写 bug 工具</h2><h3 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS Code"></a>VS Code</h3><p>巨硬出品，值得信赖。各种文本的编辑器，有时跑个测试代码。真是强大，开源社区驱动，配合各种插件，随手组装一个 All in one 工具出来。</p><p><img src="https://i.loli.net/2020/08/15/CTviPj4mVpeILFn.png" srcset="/img/loading.gif" alt="我的区长父亲.png"></p><p><strong>推荐阅读：</strong></p><ul><li><a href="https://sspai.com/post/60116" target="_blank" rel="noopener"> VS Code 代码编辑器入门指南：核心组件与概念 </a></li><li><a href="https://sspai.com/post/60117" target="_blank" rel="noopener"> VS Code 代码编辑器入门指南下篇：场景化应用介绍 </a></li></ul><h3 id="IntelliJ-IDEA"><a href="#IntelliJ-IDEA" class="headerlink" title="IntelliJ IDEA"></a>IntelliJ IDEA</h3><p>在学 Java，在这上面做一些 Java 项目。用起来感觉要比 Eclipse 舒服一点，虽然两个都挺慢的。所以一些简单的练手代码都用 VS Code 写了。</p><h2 id="手机上用的一些小工具"><a href="#手机上用的一些小工具" class="headerlink" title="手机上用的一些小工具"></a>手机上用的一些小工具</h2><p>除了上面列举的有移动端 App 的软件，我还在使用下面这些小工具。</p><h3 id="Apple-Podcasts"><a href="#Apple-Podcasts" class="headerlink" title="Apple Podcasts"></a>Apple Podcasts</h3><p>这半年赋闲在家，闲来无聊用播客填补生活的空洞。后来发现这也是一种非常有效的获取知识、前沿信息的途径，利用声音这种特殊的介质传播，更具亲和力，更加易于融入生活中。</p><p>随便说几个我平时听的博客吧：</p><ul><li><strong>津津乐道</strong>：朱老板与各个领域的达人共同制作的博客节目。旗下好几个栏目，「科技乱炖」科技向、「津津有味」吃货向、「拼娃时代」教育向等。</li><li><strong>随机波动 StochasticVolatility</strong>：三个媒体人做的一档博客节目，有关社科、文学、并讨论一些社会热点问题。剩余价值炸号后复出博客</li><li><strong>故事 FM</strong>：用你的声音讲述你的故事。亲历者自述声音节目。我感觉这种形式非常不错，亲身经历的人来自我讲述，一些情感、故事的表达是无可比拟的。</li><li><strong>生活漫游指南</strong>：听爱科普的土豆和大家一起扯。</li><li><strong>Anyway.FM 设计杂谈</strong>：新晋标签「赔钱博客」，两位设计师谈天说地聊设计。</li></ul><h3 id="Apple-Books"><a href="#Apple-Books" class="headerlink" title="Apple Books"></a>Apple Books</h3><p>原来用 Google Play Books，无奈中文无法换字体，并且只能使用翻页的阅读方式。买了 iPhone 后立即换到了 Apple Books 上，多种字体选择，翻页，滚动阅读都可以，黑暗模式也很优雅的说。爱了爱了，就靠好的工具来促进我的阅读量呢！</p><p><a href="https://www.notion.so/6c50da3c1e7540a0ad3270b9e87ec036?v=866b11faa0a640c2aae83641a2475251" target="_blank" rel="noopener">这里是我的书单</a></p><h3 id="Duolingo"><a href="#Duolingo" class="headerlink" title="Duolingo"></a>Duolingo</h3><p>努力的学日语中……有用半吊子英语学日语的吗？🙋</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上这些软件真的在我的生活学习中帮了我很多，推荐给大家，希望大家每天都要过的精彩哦😎。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章的想法来自我的一位朋友问我平时在使用什么软件，简单交流之后决定写个文来介绍介绍。鸽了好久的博客终于开张了，希望看到文章的你能有一些收获。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>LeetCode #3 无重复字符的最长子串</title>
