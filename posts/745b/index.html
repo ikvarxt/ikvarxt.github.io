@@ -233,7 +233,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：6 个月前
+                  本文最后更新于：2 个月前
                 
               </p>
             
@@ -273,7 +273,7 @@
 <h2 id="装系统，测试"><a href="#装系统，测试" class="headerlink" title="装系统，测试"></a>装系统，测试</h2><p>原硬盘和新 SSD 装好，系统还是会从机械硬盘引导，开起来制作一个 Windows 10 U 盘启动盘，然后将系统装到 SSD 中就行了，没啥难度。没换 SSD 之前我也天天装系统，从没有这么快装好过，这个速度可是太舒服了。</p>
 <p>开机速度的提升非常明显，从先前的 3 分钟锐减到 20 几秒，别提多爽了。系统盘的拷贝速度大致为 300 - 400 MB/s，对于一个几乎 10 年前的笔记本来说已经是飞快了。我很满意。</p>
 <p>待机内存占用 1.5GB 左右，还剩 4 GB 多。非常的富裕。比起之前 Windows 7 系统 700MB 的占用，Windows 10 要重不少，原来 2GB 的内存根本不可能流畅运行。现在系统开启透明效果，后台应用随便开，都不成问题。妈妈再也不用担心我的电脑性能不够了。</p>
-<h2 id="一个小坑"><a href="#一个小坑" class="headerlink" title="一个小坑"></a>一个小坑</h2><p>我这里遇到了开机黑屏好长时间才进系统的问题。翻帖子发现是集显导致的，直接在组策略编辑器里把下列两个值设为 <code>0</code> 即可，完美解决。</p>
+<h2 id="一个小坑"><a href="#一个小坑" class="headerlink" title="一个小坑"></a>一个小坑</h2><p>我这里遇到了开机黑屏好长时间才进系统的问题。翻帖子发现是集显导致的，直接在注册表编辑器（regedit）里把下列两个值设为 <code>0</code> 即可，完美解决。</p>
 <pre><code class="hljs undefined">[<span class="hljs-name">HKEY_LOCAL_MACHINE</span>\SYSTEM\ControlSet001\Control\Class\&#123;<span class="hljs-number">4</span>D36E968-E325-11CE-BFC1-08002BE10318&#125;\[<span class="hljs-name">b</span>]<span class="hljs-number">0000</span>[<span class="hljs-name">/b</span>]]
 [<span class="hljs-name">HKEY_LOCAL_MACHINE</span>\SYSTEM\ControlSet001\Control\Class\&#123;<span class="hljs-number">4</span>D36E968-E325-11CE-BFC1-08002BE10318&#125;\[<span class="hljs-name">b</span>]<span class="hljs-number">0001</span>[<span class="hljs-name">/b</span>]]</code></pre>
 
