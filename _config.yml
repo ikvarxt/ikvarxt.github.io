@@ -102,3 +102,8 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+feed:
+  enable: true
+  type: rss2
+  path: rss2.xml
