@@ -2,6 +2,7 @@
 title: HarmonyOS 鸿蒙上使用 Compose imePadding 无效的问题
 date: 2024-06-27 09:54:53
 tags:
+permalink: HarmonyOS-imePadding-not-working/
 ---
 
 先说结论：
