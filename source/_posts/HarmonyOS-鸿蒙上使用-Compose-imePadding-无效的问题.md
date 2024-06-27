@@ -4,9 +4,9 @@ date: 2024-06-27 09:54:53
 tags:
 ---
 
-# 先说结论
+先说结论：
 
-Manifest 中 Activity 的 `android:windowSoftInputMode` 标记避免使用 adjustNothing，而是使用 adjustResize 等其他 adjust 值。
+Manifest 中 Activity 的 `android:windowSoftInputMode` 标记避免使用 `adjustNothing`，而是使用 `adjustResize` 等其他 "adjust" 值。
 
 --- 
 
