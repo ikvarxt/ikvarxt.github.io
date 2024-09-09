@@ -8,7 +8,7 @@ subtitle: ''
 description: ''
 keywords:
 author: ikvarxt
-language: zh
+language: zh-CN
 timezone: ''
 
 # URL
@@ -27,7 +27,7 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
+i18n_dir: zh-CN
 skip_render:
 
 # Writing
