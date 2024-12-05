@@ -1,7 +1,9 @@
 ---
 title: 在 Android Fragment 中集成 React Native
 date: 2024-09-09 13:27:38
-tags:
+tags: 
+  - Android
+  - React Native
 permalink: integrate-react-native-to-android-fragment/
 ---
 
