@@ -81,7 +81,7 @@ enum {
 
 Framework 层的 binder 将实现分为 native 和 proxy 两端，native 端对应的是服务端的实现，proxy 端对应的是服务的远程接口，使用服务的 client 将会拿到 proxy 端用来发起 RPC 请求。proxy 和 native 内部通过 binder 协议进行中转。client 调用 Foo.bar() 函数的时候，会将函数号、参数信息传递给 binder driver 中，binder 跨进程访问 native 实现的对应函数。实现 RPC 调用。
 
-![binder arch, https://qiangbo-workspace.oss-cn-shanghai.aliyuncs.com/AndroidNewFeatureBook/Chapter1/binder_middleware.png](images/binder_middleware.png)
+![binder 类结构](images/binder_middleware.png)
 
 为什么要这么设计。interface 的设计逻辑是什么。
 
