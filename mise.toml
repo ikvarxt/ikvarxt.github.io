@@ -1,0 +1,7 @@
+
+[tasks.publish]
+run = [
+  'git add source',
+  "git commit -m \"Update blog post at $(date '+%Y-%m-%d %H:%M:%S')\"",
+  "git push origin master",
+]
