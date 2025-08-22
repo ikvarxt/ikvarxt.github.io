@@ -1,7 +1,7 @@
 ---
-title: git workspace tips
+title: git dev tips
 date: 2025-08-23 04:03:17
-permalink: git-workspace-tips/
+permalink: git-dev-tips/
 tags:
   - Tips
 ---
