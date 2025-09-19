@@ -3,6 +3,7 @@ title: macOS 一键切换 Karabiner Profile 和输入法
 date: 2025-09-20 01:55:19
 permalink: one-key-switch-karabine-profile-on-macos
 tags:
+  - Tips
 ---
 
 ## 为什么
